@@ -13,4 +13,4 @@ describe('LottieAnimService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-});
+}); 
