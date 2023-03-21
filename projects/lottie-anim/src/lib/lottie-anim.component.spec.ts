@@ -1,23 +1,16 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
-import { LottieAnimComponent } from './lottie-anim.component';
+import { LottieAnimService } from './lottie-anim.service';
 
-describe('LottieAnimComponent', () => {
-  let component: LottieAnimComponent;
-  let fixture: ComponentFixture<LottieAnimComponent>;
+describe('LottieAnimService', () => {
+  let service: LottieAnimService;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ LottieAnimComponent ]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(LottieAnimComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(LottieAnimService);
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should be created', () => {
+    expect(service).toBeTruthy();
   });
 });
