@@ -1,0 +1,71 @@
+.root-container {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+.destination-content {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-0%, 0%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.card-header-text {
+    font-weight: 500;
+}
+.list-col {
+    max-height: 100%;
+}
+.list-col .card {
+    overflow: auto;
+    max-height: 100%;
+    position: relative;
+}
+.card {
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    border-radius: 10px;
+    border: 0;
+    background-color: var(--travel-list-card-background-color);
+}
+.inspector-col h3 {
+    font-weight: 500;
+    font-size: 18px;
+}
+.continent {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+.list-item-checkbox {
+    margin-top: 5px;
+}
+.travel-list-item {
+    background-color: unset;
+}
+
+.travel-list-item.active {
+    background-color: var(--travel-list-item-active-background);
+}
+
+.travel-list-item:hover {
+    background-color: var(--travel-list-item-hover-background);
+}
+.mat-expansion-panel {
+    background-color: transparent;
+    color: unset;
+    box-shadow: unset;
+}
+.mat-expansion-panel-header {
+    background-color: var(--travel-list-expander-background-color);
+}
+.mat-expansion-panel-header.mat-expanded {
+    background-color: var(--travel-list-expander-expanded-background-color) !important;
+}
+.mat-expansion-panel-header:hover {
+    background-color: var(--travel-list-expander-hover-background-color) !important;
+}
+.mat-expansion-panel-header-title {
+    color: unset;
+}
