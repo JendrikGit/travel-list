@@ -24,6 +24,10 @@
         "mark-done": "Mark as completed",
         "notes-placeholder": "Enter notes here",
         "upcoming": "Upcoming",
-        "past": "Past"
+        "past": "Past",
+        "delete": "Delete"
+    },
+    "privacy-component": {
+        "header": "Privacy policy"
     }
 }
