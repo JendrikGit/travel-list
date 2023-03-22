@@ -29,5 +29,19 @@
     },
     "privacy-component": {
         "header": "Privacy policy"
+    },
+    "list-dialog": {
+        "header": "Create a list",
+        "label": "What name would you like to use for the new list?",
+        "save": "Save list",
+        "cancel": "Cancel"
+    },
+    "tags-dialog": {
+        "header": "Create a tag",
+        "label": "What name would you like to use for the new tag?",
+        "save": "Save tag",
+        "cancel": "Cancel",
+        "color": "Tag color",
+        "red": "Red"
     }
 }
