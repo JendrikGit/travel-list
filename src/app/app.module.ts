@@ -26,10 +26,11 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
     HomeComponent,
     PrivacyComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
     CommonModule,
     FormsModule,
     HttpClientModule,

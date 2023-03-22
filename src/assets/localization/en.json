@@ -1,0 +1,13 @@
+{
+    "sidebar-component": {
+        "home-page": "Home",
+        "dest-page": "My destinations",
+        "lists-page": "My lists",
+        "privacy-page": "Privacy",
+        "download-page": "Download",
+        "personal-list": "Personal",
+        "work-list": "Work",
+        "tags-page": "Tags",
+        "priority": "Priority"
+    }
+}
