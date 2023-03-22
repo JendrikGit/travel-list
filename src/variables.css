@@ -1,4 +1,6 @@
 :root {
     /** SIDEBAR **/
-    --sidebar-width: 300px;
+    --sidebar-width: 320px;
+    /** MAT CHIP **/
+    --mdc-chip-container-height: 20px;
 }

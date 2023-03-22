@@ -1,9 +1,25 @@
 :root[data-theme="light"] {
     /** BODY **/
     --body-background-color: white;
-
+    --accent-color: #009735;
     /** SIDEBAR **/
     --sidebar-background-color: #f3f3f3;
     --sidebar-color: #525252;
-    --sidebar-active-color: #008dff;
+    /** TRAVEL LIST **/
+    --travel-list-item-background: #eeeeee;
+    --travel-list-item-hover-background: #e4e4e4;
+    --checkbox-border-color: rgba(41, 41, 41, 0.87);
+    --travel-list-card-background-color: #f3f3f3;
+    --travel-list-expander-background-color: #dfdfdf;
+    --travel-list-expander-hover-background-color: #d3d3d3;
+    --travel-list-expander-expanded-background-color: #c2c2c2;
+
+    /** TASK INPUT **/
+    --travel-list-task-input-background: #eeeeee;
+    --travel-list-task-input-label-color: black;
+
+    /** MAT CHIP **/
+    --chip-tag-background-color: #d5d5d5;
+    --chip-tag-color: black;
+    --chip-tag-country-background-color: #77b942;
 }
