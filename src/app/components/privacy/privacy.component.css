@@ -1,0 +1,20 @@
+.root-container {
+    position: relative;
+    overflow: auto;
+    height: 100%;
+}
+
+.privacy-content {
+    margin: 50px 0;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    flex-direction: column;
+}
+
+.privacy-header {
+    font-weight: 500;
+    font-size: 30px;
+}
