@@ -16,6 +16,9 @@ import { DownloadComponent } from './components/download/download.component';
 import { HomeComponent } from './components/home/home.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
 import { SharedModule } from './modules/shared/shared.module';
+import { ListDialogComponent } from './components/list-dialog/list-dialog.component';
+import { TagsDialogComponent } from './components/tags-dialog/tags-dialog.component';
+
 
 
 @NgModule({
@@ -23,6 +26,8 @@ import { SharedModule } from './modules/shared/shared.module';
     AppComponent,
     TestComponent,
     SidebarComponent,
+    ListDialogComponent,
+    TagsDialogComponent
   ],
 
 
