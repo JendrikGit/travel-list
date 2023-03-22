@@ -3,7 +3,7 @@
         <div class="row h-100">
             <!-- List of all destinations -->
             <div class="col-lg-6 p-2 list-col">
-                <div class="card w-100 h-100 p-4">
+                <div class="card w-100 h-100 p-4  animate__animated animate__slideInUp animate__faster" >
                     <div class="card-body">
                         <h1 class="card-header-text">{{ 'destinations-component.header' | translate }}</h1>
                         <mat-accordion>
@@ -14,7 +14,7 @@
                                     </mat-panel-title>
                                 </mat-expansion-panel-header>
                                 <ul class="travel-list mt-3">
-                                    <li class="travel-list-item" matRipple>
+                                    <li class="travel-list-item" active matRipple>
                                         <div class="travel-list-item-panel">
                                             <mat-checkbox class="list-item-checkbox"></mat-checkbox>
                                             <div class="list-item-info-panel">
@@ -29,6 +29,87 @@
                                             <div class="list-item-info-panel">
                                                 <p>Berlin</p>
                                                 <p class="continent">Europe</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="travel-list-item" matRipple>
+                                        <div class="travel-list-item-panel">
+                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
+                                            <div class="list-item-info-panel">
+                                                <p>Seattle</p>
+                                                <p class="continent">Noth America</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="travel-list-item" matRipple>
+                                        <div class="travel-list-item-panel">
+                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
+                                            <div class="list-item-info-panel">
+                                                <p>Seattle</p>
+                                                <p class="continent">Noth America</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="travel-list-item" matRipple>
+                                        <div class="travel-list-item-panel">
+                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
+                                            <div class="list-item-info-panel">
+                                                <p>Seattle</p>
+                                                <p class="continent">Noth America</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="travel-list-item" matRipple>
+                                        <div class="travel-list-item-panel">
+                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
+                                            <div class="list-item-info-panel">
+                                                <p>Seattle</p>
+                                                <p class="continent">Noth America</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="travel-list-item" matRipple>
+                                        <div class="travel-list-item-panel">
+                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
+                                            <div class="list-item-info-panel">
+                                                <p>Seattle</p>
+                                                <p class="continent">Noth America</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="travel-list-item" matRipple>
+                                        <div class="travel-list-item-panel">
+                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
+                                            <div class="list-item-info-panel">
+                                                <p>Seattle</p>
+                                                <p class="continent">Noth America</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="travel-list-item" matRipple>
+                                        <div class="travel-list-item-panel">
+                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
+                                            <div class="list-item-info-panel">
+                                                <p>Seattle</p>
+                                                <p class="continent">Noth America</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="travel-list-item" matRipple>
+                                        <div class="travel-list-item-panel">
+                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
+                                            <div class="list-item-info-panel">
+                                                <p>Seattle</p>
+                                                <p class="continent">Noth America</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="travel-list-item" matRipple>
+                                        <div class="travel-list-item-panel">
+                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
+                                            <div class="list-item-info-panel">
+                                                <p>Seattle</p>
+                                                <p class="continent">Noth America</p>
                                             </div>
                                         </div>
                                     </li>
@@ -68,7 +149,7 @@
 
             <!-- Destination inspector -->
             <div class="col-lg-6 p-2 inspector-col">
-                <div class="card w-100 p-4">
+                <div class="card w-100  h-100 p-4 animate__animated animate__slideInUp animate__faster animate__delay-100ms">
                     <div class="card-body">
                         <mat-chip-set>
                             <mat-chip class="travel-list-tag-box travel-list-country-box">
@@ -97,7 +178,8 @@
                         </mat-form-field>
 
                         <div class="w-100">
-                            <button mat-button color="primary">{{ 'destinations-component.mark-done' | translate}}</button>
+                            <button class="me-2" mat-raised-button color="warn">{{ 'destinations-component.delete' | translate}}</button>
+                            <button mat-raised-button color="primary">{{ 'destinations-component.mark-done' | translate}}</button>
                         </div>
                     </div>
                 </div>

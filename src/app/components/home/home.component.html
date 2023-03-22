@@ -2,14 +2,15 @@
     <div class="home-content">
         <!-- Headers -->
         <div class="home-header">
-            <h1 class="greeting-message">{{ 'home-component.greeting-message' | translate }}   
-                <span class="header-dot position-absolute translate-middle border border-light rounded-circle">
-              </span>
+            <h1 class="greeting-message animate__animated animate__faster animate__slideInUpBig">{{
+                'home-component.greeting-message' | translate }} <span
+                    class="header-dot position-absolute translate-middle border border-light rounded-circle">
+                </span>
             </h1>
-        </div>    
-        <div class="home-header">
+        </div>
+        <div class="home-header animate__animated animate__faster animate__slideInUpBig animate__delay-100ms">
             <h1 class="greeting-quote">{{ 'home-component.greeting-quote' | translate }}</h1>
-        </div>    
+        </div>
 
 
         <!-- Content -->
@@ -36,7 +37,7 @@
             <h1 class="greeting-message">{{ 'home-component.upcoming' | translate }}</h1>
         </div>
 
-        <ul class="travel-list mt-3 mb-5">
+        <ul class="travel-list mt-3 mb-5 animate__animated animate__slideInUp animate__faster">
             <li class="travel-list-item" matRipple>
                 <div class="travel-list-item-panel">
                     <mat-checkbox class="list-item-checkbox"></mat-checkbox>
@@ -45,9 +46,9 @@
                             <mat-chip class="travel-list-tag-box travel-list-country-box">
                                 <i class="bi bi-globe-americas"></i>
                                 Europe
-                             </mat-chip>
+                            </mat-chip>
                             <mat-chip class="travel-list-tag-box">
-                               #test
+                                #test
                             </mat-chip>
                             <mat-chip class="travel-list-tag-box">
                                 #test
@@ -56,7 +57,9 @@
                         <p>Vienna</p>
                     </div>
                     <div class="travel-list-action-panel">
-                        <button class="btn"><i class="bi bi-x-circle"></i></button>
+                        <button mat-mini-fab color="warn">
+                            <mat-icon>delete</mat-icon>
+                        </button>
                     </div>
                 </div>
             </li>
@@ -68,19 +71,20 @@
                             <mat-chip class="travel-list-tag-box travel-list-country-box">
                                 <i class="bi bi-globe-americas"></i>
                                 Europe
-                             </mat-chip>
+                            </mat-chip>
                             <mat-chip class="travel-list-tag-box">
-                               #test
+                                #test
                             </mat-chip>
                             <mat-chip class="travel-list-tag-box">
                                 #test
                             </mat-chip>
                         </mat-chip-set>
-                        <p>Berlin</p>
+                        <p>Vienna</p>
                     </div>
                     <div class="travel-list-action-panel">
-                        <button class="btn"><i class="bi bi-x-circle"></i></button>
-                    </div>
+                        <button mat-mini-fab color="warn">
+                            <mat-icon>delete</mat-icon>
+                        </button>                    </div>
                 </div>
             </li>
             <li class="travel-list-item" matRipple>
@@ -90,20 +94,20 @@
                         <mat-chip-set>
                             <mat-chip class="travel-list-tag-box travel-list-country-box">
                                 <i class="bi bi-globe-americas"></i>
-                                Noth America
-                             </mat-chip>
+                                Europe                            </mat-chip>
                             <mat-chip class="travel-list-tag-box">
-                               #test
+                                #test
                             </mat-chip>
                             <mat-chip class="travel-list-tag-box">
                                 #test
                             </mat-chip>
                         </mat-chip-set>
-                        <p>Seattle</p>
+                        <p>Vienna</p>
                     </div>
                     <div class="travel-list-action-panel">
-                        <button class="btn"><i class="bi bi-x-circle"></i></button>
-                    </div>
+                        <button mat-mini-fab color="warn">
+                            <mat-icon>delete</mat-icon>
+                        </button>                    </div>
                 </div>
             </li>
             <li class="travel-list-item" matRipple>
@@ -114,19 +118,20 @@
                             <mat-chip class="travel-list-tag-box travel-list-country-box">
                                 <i class="bi bi-globe-americas"></i>
                                 Europe
-                             </mat-chip>
+                            </mat-chip>
                             <mat-chip class="travel-list-tag-box">
-                               #test
+                                #test
                             </mat-chip>
                             <mat-chip class="travel-list-tag-box">
                                 #test
                             </mat-chip>
                         </mat-chip-set>
-                        <p>Madrid</p>
+                        <p>Vienna</p>
                     </div>
                     <div class="travel-list-action-panel">
-                        <button class="btn"><i class="bi bi-x-circle"></i></button>
-                    </div>
+                        <button mat-mini-fab color="warn">
+                            <mat-icon>delete</mat-icon>
+                        </button>                    </div>
                 </div>
             </li>
         </ul>
