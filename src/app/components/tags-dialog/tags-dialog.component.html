@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>{{ 'tags-dialog.header' | translate }}</h1>
+<div mat-dialog-content>
+  <p>{{ 'tags-dialog.label' | translate }}</p>
+  <mat-form-field class="w-100">
+    <input matInput>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="float-end p-3">
+  <button (click)="closeDialog()" mat-raised-button color="accent">{{ 'tags-dialog.cancel' | translate }}</button>
+  <button mat-raised-button color="primary">{{ 'tags-dialog.save' | translate }}</button>
+</div>

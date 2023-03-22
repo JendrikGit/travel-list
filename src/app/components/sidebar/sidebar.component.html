@@ -37,7 +37,10 @@
     </ul>
     <!-- My lists -->
     <div class="sidebar-section-header">
-        {{ 'sidebar-component.lists-page' | translate }}
+        <span> {{ 'sidebar-component.lists-page' | translate }} </span>
+        <button mat-icon-button color="primary" class="ms-2" (click)="openListDialog()">
+            <mat-icon>add</mat-icon>
+        </button>
     </div>
 
     <ul class="sidebar-menu">
