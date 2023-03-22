@@ -7,6 +7,8 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatButtonModule} from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatIconModule} from '@angular/material/icon';
+
 
 /**
  * Shared module that is imported by lazy loaded modules.
@@ -22,7 +24,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatRippleModule,
     MatChipsModule,
     MatButtonModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: []
