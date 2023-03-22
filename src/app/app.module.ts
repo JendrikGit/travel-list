@@ -15,6 +15,8 @@ import { DestinationsComponent } from './components/destinations/destinations.co
 import { DownloadComponent } from './components/download/download.component';
 import { HomeComponent } from './components/home/home.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
+import { SharedModule } from './modules/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -24,8 +26,10 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
     DestinationsComponent,
     DownloadComponent,
     HomeComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    SharedModule,
   ],
+
 
   imports: [
     BrowserModule,
@@ -34,6 +38,7 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
     CommonModule,
     FormsModule,
     HttpClientModule,
+    // Wird für Übersetzung benötigt
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {
@@ -54,3 +59,4 @@ export class AppModule { }
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/localization/', '.json');
 }
+

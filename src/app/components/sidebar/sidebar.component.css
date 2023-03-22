@@ -2,6 +2,8 @@
     height: 100%;
     width: var(--sidebar-width);
     background-color: var(--sidebar-background-color);
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
 }
 
 .sidebar-menu {
@@ -16,9 +18,11 @@
     line-height: 24px;
     letter-spacing: -0.3px;
     font-family: 'Inter', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--sidebar-color);
     transition: background-color ease-in-out 100ms;
+    padding: 0 20px;
+
 }
 
 .sidebar-menu-item.active {
@@ -45,14 +49,19 @@
     line-height: 24px;
     letter-spacing: -0.3px;
     font-family: 'Inter', sans-serif;
-    padding: 10px 25px;
+    padding: 10px 45px;
     margin-top: 30px;
 }
 
 .sidebar-header {
-    padding: 10px 25px;
+    padding: 10px 45px;
 }
 
 .sidebar-header img {
     margin: 30px 0;
+
+}
+
+.bi::before {
+    margin-right: 10px;
 }

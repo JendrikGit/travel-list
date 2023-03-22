@@ -1,1 +1,108 @@
-<p>destinations works!</p>
+<div class="root-container">
+    <div class="destination-content h-100 p-5 container">
+        <div class="row h-100">
+            <!-- List of all destinations -->
+            <div class="col-lg-6 p-2 list-col">
+                <div class="card w-100 h-100 p-4">
+                    <div class="card-body">
+                        <h1 class="card-header-text">{{ 'destinations-component.header' | translate }}</h1>
+                        <mat-accordion>
+                            <mat-expansion-panel hideToggle [expanded]="true">
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        {{ 'destinations-component.upcoming' | translate }}
+                                    </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <ul class="travel-list mt-3">
+                                    <li class="travel-list-item" matRipple>
+                                        <div class="travel-list-item-panel">
+                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
+                                            <div class="list-item-info-panel">
+                                                <p>Vienna</p>
+                                                <p class="continent">Europe</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="travel-list-item" matRipple>
+                                        <div class="travel-list-item-panel">
+                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
+                                            <div class="list-item-info-panel">
+                                                <p>Berlin</p>
+                                                <p class="continent">Europe</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="travel-list-item" matRipple>
+                                        <div class="travel-list-item-panel">
+                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
+                                            <div class="list-item-info-panel">
+                                                <p>Seattle</p>
+                                                <p class="continent">Noth America</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </mat-expansion-panel>
+                            <mat-expansion-panel hideToggle>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        {{ 'destinations-component.past' | translate }}
+                                    </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <ul class="travel-list mt-3">
+                                    <li class="travel-list-item" matRipple>
+                                        <div class="travel-list-item-panel">
+                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
+                                            <div class="list-item-info-panel">
+                                                <p>Vienna</p>
+                                                <p class="continent">Europe</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </mat-expansion-panel>
+                        </mat-accordion>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destination inspector -->
+            <div class="col-lg-6 p-2 inspector-col">
+                <div class="card w-100 p-4">
+                    <div class="card-body">
+                        <mat-chip-set>
+                            <mat-chip class="travel-list-tag-box travel-list-country-box">
+                                <i class="bi bi-globe-americas"></i>
+                                Europe
+                            </mat-chip>
+                        </mat-chip-set>
+                        <h1>Vienna</h1>
+
+                        <h3 class="mt-4">{{ 'destinations-component.lists' | translate }}</h3>
+                        <mat-chip-listbox aria-label="Fish selection">
+                            <mat-chip-option selected>Personal</mat-chip-option>
+                            <mat-chip-option>Work</mat-chip-option>
+                        </mat-chip-listbox>
+
+                        <h3 class="mt-4">{{ 'destinations-component.tags' | translate }}</h3>
+                        <mat-chip-listbox aria-label="Fish selection">
+                            <mat-chip-option selected>Priority</mat-chip-option>
+                            <mat-chip-option>Vacation</mat-chip-option>
+                        </mat-chip-listbox>
+
+                        <h3 class="mt-4">{{ 'destinations-component.notes' | translate }}</h3>
+                        <mat-form-field class="w-100">
+                            <mat-label>{{ 'destinations-component.notes-placeholder' | translate }}</mat-label>
+                            <textarea rows="5" matInput></textarea>
+                        </mat-form-field>
+
+                        <div class="w-100">
+                            <button mat-button color="primary">{{ 'destinations-component.mark-done' | translate}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -9,5 +9,21 @@
         "work-list": "Work",
         "tags-page": "Tags",
         "priority": "Priority"
+    },
+    "home-component": {
+        "greeting-message": "Good Evening, Heiko",
+        "greeting-quote": "What's your next destination?",
+        "upcoming": "Upcoming",
+        "add-task": "Add destination"
+    },
+    "destinations-component": {
+        "header": "Your travel plans",
+        "notes": "Notes about destination",
+        "lists": "List",
+        "tags": "Tags",
+        "mark-done": "Mark as completed",
+        "notes-placeholder": "Enter notes here",
+        "upcoming": "Upcoming",
+        "past": "Past"
     }
 }

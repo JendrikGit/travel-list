@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600&display=swap');
 @import url('variables.css');
 @import url('theme/light.css');
 
@@ -19,4 +18,105 @@ body {
     font-weight: 400 !important;
     border-radius: 50%;
 }
+
+.travel-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.travel-list-item {
+    padding: 10px;
+    background-color: var(--travel-list-item-background);
+    border-radius: 15px;
+    margin: 10px 0;
+    user-select: none;
+    transition: background-color ease-in-out 100ms;
+}
+
+.travel-list-item:hover {
+    cursor: pointer;
+    background-color: var(--travel-list-item-hover-background);
+}
+
+.travel-list-item:hover .travel-list-action-panel {
+    opacity: 1;
+}
+
+.travel-list-item-panel {
+    display: flex;
+    gap: 20px;
+}
+
+.list-item-info-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item-info-panel span {
+    margin: 0;
+    font-size: 13px;
+}
+
+.list-item-info-panel p {
+    margin: 5px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.list-item-checkbox {
+    margin-top: 10px;
+}
+
+.mdc-checkbox__background {
+    border-color: var(--checkbox-border-color) !important;
+}
+
+.travel-list-item span.list-span {
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: 400;
+}
+
+.travel-list-item span.tag-span {
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: 400;
+}
+
+.travel-list-action-panel {
+    flex-grow: 2;
+    text-align: right;
+    opacity: 0;
+    transition: opacity ease-in 150ms;
+}
+
+.travel-list-action-panel button {
+    margin-top: 10px;
+}
+
+.mat-mdc-text-field-wrapper {
+    background-color: var(--travel-list-task-input-background) !important;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--travel-list-task-input-label-color);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: var(--travel-list-task-input-label-color);
+}
+
+.travel-list-tag-box {
+    background-color: var(--chip-tag-background-color) !important;
+}
+
+.travel-list-tag-box .mat-mdc-chip-action-label {
+    color: var(--chip-tag-color) !important;
+}
+
+.travel-list-country-box {
+    background-color: var(--chip-tag-country-background-color) !important; 
+}
+
 
