@@ -15,7 +15,7 @@ import { DestinationsComponent } from './components/destinations/destinations.co
 import { DownloadComponent } from './components/download/download.component';
 import { HomeComponent } from './components/home/home.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
-import { SharedModule } from './modules/shared.module';
+import { SharedModule } from './modules/shared/shared.module';
 
 
 @NgModule({
@@ -23,17 +23,13 @@ import { SharedModule } from './modules/shared.module';
     AppComponent,
     TestComponent,
     SidebarComponent,
-    DestinationsComponent,
-    DownloadComponent,
-    HomeComponent,
-    PrivacyComponent,
-    SharedModule,
   ],
 
 
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModule,
     BrowserAnimationsModule,
     CommonModule,
     FormsModule,

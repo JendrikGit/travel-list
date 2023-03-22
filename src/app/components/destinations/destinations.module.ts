@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from 'src/app/modules/shared.module';
-import { DestinationRoutingModule } from './destination-routing.module';
+import { SharedModule } from 'src/app/modules/shared/shared.module';
+import { DestinationRoutingModule } from './destinations-routing.module';
 import { DestinationsComponent } from './destinations.component';
 
 
