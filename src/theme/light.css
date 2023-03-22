@@ -7,6 +7,7 @@
     --sidebar-color: #525252;
     /** TRAVEL LIST **/
     --travel-list-item-background: #eeeeee;
+    --travel-list-item-active-background: #e6e6e6;
     --travel-list-item-hover-background: #e4e4e4;
     --checkbox-border-color: rgba(41, 41, 41, 0.87);
     --travel-list-card-background-color: #f3f3f3;

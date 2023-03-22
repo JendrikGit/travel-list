@@ -144,6 +144,17 @@ body {
 
 .travel-list-country-box {
     background-color: var(--chip-tag-country-background-color) !important; 
+
 }
+
+.animate__delay-100ms {
+    animation-delay: 100ms !important;
+}
+
+.animate__slideInUpBig {
+    animation-name: slideInUpBig;
+}
+
+
 
 
