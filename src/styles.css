@@ -1,6 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600&display=swap');
 @import url('variables.css');
 @import url('theme/light.css');
+@import url('animate.css');
+
+@keyframes slideInUp {
+    0% {
+        transform: translate3d(0, 5%, 0);
+        opacity: 0;
+        visibility: visible;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUpBig {
+    0% {
+        transform: translate3d(0, 50%, 0);
+        opacity: 0;
+        visibility: visible;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
 
 html, body { 
     height: 100%;
