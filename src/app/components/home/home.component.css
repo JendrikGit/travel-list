@@ -1,0 +1,63 @@
+.root-container {
+    position: relative;
+    overflow: auto;
+    height: 100%;
+}
+
+.home-content {
+    margin: 50px 0;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 28px;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 36px;
+}
+
+.home-header {
+    position: relative;
+}
+
+.header-dot {
+    padding: 5px;
+    bottom: 0;
+    margin-left: 7px;
+    background-color: var(--accent-color);
+}
+
+.greeting-quote {
+    opacity: .6;
+}
+
+.date-header {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.date-header div {
+    margin: 3px 0;
+}
+
+.date-header .day-panel {
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.date-header .date-panel {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.date-header .month-panel {
+    font-weight: 400;
+    font-size: 19px;
+}
