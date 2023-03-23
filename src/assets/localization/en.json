@@ -13,7 +13,7 @@
 
     },
     "home-component": {
-        "greeting-message": "Good Evening, Heiko",
+        "greeting-message": "Hello, nice to see you",
         "greeting-quote": "What's your next destination?",
         "upcoming": "Upcoming",
         "add-task": "Add destination",
