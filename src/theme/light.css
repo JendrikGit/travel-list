@@ -2,9 +2,15 @@
     /** BODY **/
     --body-background-color: white;
     --accent-color: #009735;
+    --body-color: #313131;
+    --body-color-variant: black;
     /** SIDEBAR **/
     --sidebar-background-color: #f3f3f3;
     --sidebar-color: #525252;
+    --sidebar-active-color: #009735;
+    --sidebar-item-hover-background-color: #dfdfdf;
+    --sidebar-header-color: black;
+
     /** TRAVEL LIST **/
     --travel-list-item-background: #eeeeee;
     --travel-list-item-active-background: #e6e6e6;
@@ -23,6 +29,8 @@
     --chip-tag-background-color: #d5d5d5;
     --chip-tag-color: black;
     --chip-tag-country-background-color: #77b942;
+    --continent-chip-color: black;
+
 
     /* MAT SELECT */
     --selected-value-color: black;

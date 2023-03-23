@@ -2,6 +2,8 @@
 @import url('variables.css');
 @import url('theme/light.css');
 @import url('animate.css');
+@import url('theme/dark.css');
+
 
 @font-face {
     font-family: Inter;
@@ -52,6 +54,8 @@ body {
     /* font-family: Roboto, "Helvetica Neue", sans-serif; */
     font-family: 'Inter', sans-serif;
     background-color: var(--body-background-color);
+    color: var(--body-color);
+
 }
 
 .badge {
@@ -96,6 +100,9 @@ body {
 .list-item-info-panel span {
     margin: 0;
     font-size: 13px;
+}
+.list-item-info-panel p:first-of-type {
+    color: var(--body-color-variant);
 }
 
 .list-item-info-panel p {
@@ -156,7 +163,11 @@ body {
 }
 
 .travel-list-tag-box .mat-mdc-chip-action-label {
-    color: var(--chip-tag-color) !important;
+    color: var(--chip-tag-color);
+}
+
+.continent-chip {
+    color: var(--continent-chip-color) !important;
 }
 
 .travel-list-country-box {

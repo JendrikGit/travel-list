@@ -3,7 +3,7 @@
         <!-- Headers -->
         <div class="home-header">
             <h1 class="greeting-message animate_animated animatefaster animate_slideInUpBig">{{ 'home-component.greeting-message' | translate }}   
-                <span class="header-dot position-absolute translate-middle border border-light rounded-circle">
+                <span class="header-dot position-absolute translate-middle rounded-circle">
               </span>
             </h1>
         </div>    
@@ -49,8 +49,8 @@
                     <div class="list-item-info-panel w-100" (click)="openDetailsDialog(destination);">
                         <mat-chip-set>
                             <mat-chip class="travel-list-tag-box travel-list-country-box">
-                                <i class="bi bi-globe-americas"></i>
-                                {{ destination.continent }}
+                                <i class="continent-chip bi bi-globe-americas"></i>
+                                <span class="continent-chip">{{ destination.continent }}</span>
                              </mat-chip>
                             <mat-chip class="travel-list-tag-box" >
                                #{{ destination.tag.name }}

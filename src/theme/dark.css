@@ -1,0 +1,41 @@
+:root[data-theme="dark"] {
+    /** BODY **/
+    --body-background-color: #161616;
+    --accent-color: #009735;
+    --body-color: #909090;
+    --body-color-variant: white;
+
+    /** SIDEBAR **/
+    --sidebar-background-color: #252525;
+    --sidebar-color: #909090;
+    --sidebar-active-color: #009735;
+    --sidebar-item-hover-background-color: #302f2f;
+    --sidebar-header-color: white;
+
+    /** TRAVEL LIST **/
+    --travel-list-item-background: #252525;
+    --travel-list-item-active-background: #252525;
+    --travel-list-item-hover-background: #252525;
+    --checkbox-border-color: #b4b4b4;
+    --travel-list-card-background-color: #1b1b1b;
+    --travel-list-expander-background-color: #252525;
+    --travel-list-expander-hover-background-color: #202020;
+    --travel-list-expander-expanded-background-color: #202020;
+
+    /** TASK INPUT **/
+    --travel-list-task-input-background: #252525;
+    --travel-list-task-input-label-color: white;
+
+    /** MAT CHIP **/
+    --chip-tag-background-color: #1b1b1b;
+    --chip-tag-color: white;
+    --chip-tag-country-background-color: #77b942;
+    --continent-chip-color: black;
+
+    /** MAT SELECT **/
+    --selected-value-color: white;
+
+    /** DIALOG **/
+    --dialog-background-color:  #252525;
+    --dialog-color: white;
+}

@@ -47,7 +47,7 @@
 
 .sidebar-menu-item:hover {
     cursor: pointer;
-    background-color: #dfdfdf;
+    background-color: var(--sidebar-item-hover-background-color);
 }
 
 .sidebar-section-header {
@@ -61,6 +61,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    color: var(--sidebar-header-color);
+
 }
 
 .sidebar-header {
