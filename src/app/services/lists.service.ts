@@ -9,6 +9,11 @@ import { IList } from '../models/list.interface';
   providedIn: 'root'
 })
 export class ListsService {
+    /**
+   * Gets or sets if service has been initialized.
+   */
+  public isInitialized: boolean = false;
+
   private readonly databaseKey: string = 'lists';
 
   /**
@@ -34,6 +39,8 @@ export class ListsService {
         schema: listsSchema
       }
     });
+    
+    this.isInitialized = true;
   }
 
   /**

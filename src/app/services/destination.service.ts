@@ -12,6 +12,11 @@ addRxPlugin(RxDBUpdatePlugin);
   providedIn: 'root'
 })
 export class DestinationService {
+      /**
+   * Gets or sets if service has been initialized.
+   */
+  public isInitialized: boolean = false;
+
   private readonly databaseKey: string = 'destinations';
   /**
    * Database that holds destinations.
@@ -33,6 +38,8 @@ export class DestinationService {
         schema: destinationsSchema
       }
     });
+    this.isInitialized = true;
+
   }
   /**
    * Adds new destination to database.
