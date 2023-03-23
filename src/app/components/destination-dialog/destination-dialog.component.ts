@@ -6,6 +6,7 @@ import { ITag } from 'src/app/models/tag.interface';
 import { DestinationService } from 'src/app/services/destination.service';
 import { ListsService } from 'src/app/services/lists.service';
 import { TagsService } from 'src/app/services/tags.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-destination-dialog',
@@ -89,7 +90,7 @@ export class DestinationDialogComponent {
 
     this.destinationsService.addDestination({
       id: Guid.newGuid().toString(),
-      createdAt: new Date(),
+      createdAt: moment().format('DD.MM.yyyy hh:mm:ss'),
       destination: this.destinationName,
       done: false,
       tag: this.tag!,
