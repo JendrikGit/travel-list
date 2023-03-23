@@ -63,7 +63,7 @@ export class AppModule {
     private listsService: ListsService,
     private tagsService: TagsService,
     private destinationsService: DestinationService) {
-  }
+  } 
  }
 // AoT erfordert eine exportierte Funktion für Factories.  
 // LDie Lokalisierung wird aus dem Ordner assets/localization geladen.
