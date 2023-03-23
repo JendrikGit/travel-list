@@ -2,15 +2,15 @@
     <div class="destination-content h-100 p-5 container">
         <div class="row h-100">
             <!-- List of upcoming destinations -->
-            <div class="col-lg-6 p-2 list-col">
-                <div class="card w-100 h-100 p-4 animate_animated animateslideInUp animate_faster">
+            <div class="col-xl-6 p-2 list-col">
+                <div class="card w-100 h-100 p-4 animate__animated animate__slideInUp animate__faster">
                     <div class="card-body">
                         <h1 class="card-header-text">{{ 'destinations-component.header' | translate }}</h1>
                         <div *ngIf="isLoading" class="text-center">
                             <lib-lottie-anim [width]="'350px'" [segments]="[5, 60]" [loop]="true"
                                 [path]="'assets/animations/loading-anim.json'" [autoplay]="true"></lib-lottie-anim>
-                            <h1 class="animate_animated animatefaster animate_slideInUpBig">{{ 'home-component.loading'
-                                | translate }}</h1>
+                            <h1 class="animate__animated animate__faster animate__slideInUpBig">{{
+                                'home-component.loading' | translate }}</h1>
                         </div>
                         <mat-accordion *ngIf="!isLoading">
                             <mat-expansion-panel hideToggle [expanded]="true">
@@ -23,10 +23,11 @@
                                     <lib-lottie-anim [width]="'350px'" [segments]="[0, 146]"
                                         [path]="'assets/animations/schedule-anim.json'"
                                         [autoplay]="true"></lib-lottie-anim>
-                                    <h1 class="animate_animated animatefaster animate_slideInUpBig">{{
+                                    <h1 class="animate__animated animate__faster animate__slideInUpBig">{{
                                         'home-component.empty' | translate }}</h1>
-                                    <p class="animate_animated animatefaster animateslideInUpBig animate_delay-100ms">{{
-                                        'home-component.empty-info' | translate }}</p>
+                                    <p
+                                        class="animate__animated animate__faster animate__slideInUpBig animate__delay-100ms">
+                                        {{ 'home-component.empty-info' | translate }}</p>
                                 </div>
                                 <ul class="travel-list mt-3">
                                     <li class="travel-list-item"
@@ -55,10 +56,11 @@
                                     <lib-lottie-anim [width]="'350px'" [segments]="[0, 146]"
                                         [path]="'assets/animations/schedule-anim.json'"
                                         [autoplay]="true"></lib-lottie-anim>
-                                    <h1 class="animate_animated animatefaster animate_slideInUpBig">{{
+                                    <h1 class="animate__animated animate__faster animate__slideInUpBig">{{
                                         'home-component.empty' | translate }}</h1>
-                                    <p class="animate_animated animatefaster animateslideInUpBig animate_delay-100ms">{{
-                                        'home-component.empty-info-past' | translate }}</p>
+                                    <p
+                                        class="animate__animated animate__faster animate__slideInUpBig animate__delay-100ms">
+                                        {{ 'home-component.empty-info-past' | translate }}</p>
                                 </div>
                                 <ul class="travel-list mt-3">
                                     <li class="travel-list-item"
@@ -82,8 +84,9 @@
                 </div>
             </div>
             <!-- Destination inspector -->
-            <div class="col-lg-6 p-2 inspector-col">
-                <div class="card w-100 h-100 p-4 animate_animated animateslideInUp animatefaster animate_delay-100ms">
+            <div class="col-xl-6 p-2 inspector-col">
+                <div
+                    class="card w-100 h-100 p-4 animate__animated animate__slideInUp animate__faster animate__delay-100ms">
                     <div class="card-body" *ngIf="selectedDestination != undefined">
                         <mat-chip-set>
                             <mat-chip class="travel-list-tag-box travel-list-country-box">
@@ -110,7 +113,6 @@
                         </mat-form-field>
                         <button class="mb-5" (click)="updateNotes(selectedDestination.notes)" mat-raised-button
                             color="primary">{{ 'destinations-component.save-notes' | translate}}</button>
-
                         <div class="w-100">
                             <button (click)="deleteDestination()" class="me-2" mat-raised-button color="warn">{{
                                 'destinations-component.delete' | translate}}</button>
