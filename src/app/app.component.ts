@@ -9,10 +9,20 @@ import { TagsService } from './services/tags.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent { 
+  /**
+ * Gets or sets if sidebar is toggled in narrow mode.
+ */
+  public static isSidebarToggled: boolean = false;
+
+  get isSidebarToggled(): boolean {
+    return AppComponent.isSidebarToggled;
+  }
     /**
-   * Gets or sets if sidebar is toggled in narrow mode.
+   * Toggles sidebar on or off.
    */
-    public isSidebarToggled: boolean = false;
+    public toggleSidebar(): void {
+      AppComponent.isSidebarToggled = !AppComponent.isSidebarToggled;
+    }
 }
 

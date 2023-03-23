@@ -1,6 +1,6 @@
 
 
-    <button mat-icon-button color="primary" class="sidebar-button" (click)="isSidebarToggled = !isSidebarToggled">
+    <button mat-icon-button color="primary" class="sidebar-button" (click)="toggleSidebar()">
         <mat-icon>menu</mat-icon>
     </button>
 
@@ -16,6 +16,6 @@
     </div>
     </div>
     
-    <div *ngIf="isSidebarToggled" class="sidebar-overlay" (click)="isSidebarToggled = false"></div>
+    <div *ngIf="isSidebarToggled" class="sidebar-overlay" (click)="toggleSidebar()"></div>
 
     
