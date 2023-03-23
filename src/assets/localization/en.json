@@ -40,8 +40,16 @@
         "header": "Create a tag",
         "label": "What name would you like to use for the new tag?",
         "save": "Save tag",
+        "cancel": "Cancel"
+
+    },
+    "destinations-dialog": {
+        "header": "Add new destination",
+        "label": "Where would you like to go next?",
+        "save": "Save destination",
         "cancel": "Cancel",
-        "color": "Tag color",
-        "red": "Red"
+        "target-list": "List",
+        "target-continent": "Continent",
+        "target-dest": "Destination"
     }
 }
