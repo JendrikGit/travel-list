@@ -4,12 +4,13 @@
         left: calc(-1 * var(--sidebar-width));
         height: 100%;
         z-index: 10;
+        top: 0px;
     }
 
     .sidebar-button {
         display: block !important;
     }
-}
+
 
 .root-container {
     width: 100%;
@@ -32,9 +33,9 @@
 }
 
 .sidebar-button {
-    position: relative !important;
+    position: absolute !important;
     top: 35px !important;
-    left: 20px !important;
+    left: 10px !important;
     display: none;
     z-index: 20;
 }
@@ -48,4 +49,5 @@
     right: 0;
     bottom: 0;
 
+}
 }
