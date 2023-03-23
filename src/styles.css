@@ -34,6 +34,14 @@
     }
 }
 
+@media only screen and (max-width: 700px) {
+    .list-item-checkbox {
+        display: none !important;
+    }
+}
+
+
+
 html, body { 
     height: 100%;
     width: 100%; 
