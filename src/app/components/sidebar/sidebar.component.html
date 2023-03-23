@@ -17,7 +17,7 @@
         <li [routerLink]="'destinations'" id="list-item" class="sidebar-menu-item" [routerLinkActive]="'active'" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
             <div class="sidebar-menu-item-container">
                 <i class="bi bi-grid-1x2-fill"></i>
-                {{ 'sidebar-component.dest-page' | translate }} <span class="badge text-bg-secondary">4</span>
+                {{ 'sidebar-component.dest-page' | translate }} <span class="badge text-bg-secondary">{{ destinationCount }}</span>
             </div>
         </li>
         <li id="privacy-item" class="sidebar-menu-item">
@@ -45,15 +45,9 @@
 
     <ul class="sidebar-menu">
         <li id="home-item" class="sidebar-menu-item">
-        <li id="home-item" class="sidebar-menu-item" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
+        <li *ngFor="let list of availableLists" id="home-item" class="sidebar-menu-item" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
             <div class="sidebar-menu-item-container">
-                {{ 'sidebar-component.personal-list' | translate }}
-            </div>
-        </li>
-        <li id="list-item" class="sidebar-menu-item">
-        <li id="list-item" class="sidebar-menu-item" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
-            <div class="sidebar-menu-item-container">
-                {{ 'sidebar-component.work-list' | translate }} <span class="badge text-bg-secondary">4</span>
+                {{ list.name }}
             </div>
         </li>
     </ul>
@@ -64,9 +58,9 @@
 
     <ul class="sidebar-menu">
         <li id="home-item" class="sidebar-menu-item">
-        <li id="home-item" class="sidebar-menu-item" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
+        <li *ngFor="let tag of availableTags" id="home-item" class="sidebar-menu-item" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
             <div class="sidebar-menu-item-container">
-                #{{ 'sidebar-component.priority' | translate }}
+                #{{ tag.name | translate }}
             </div>
         </li>
     </ul>

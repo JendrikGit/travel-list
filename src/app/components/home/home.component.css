@@ -45,11 +45,13 @@ h1 {
 
 .date-header div {
     margin: 3px 0;
+    text-align: center;
 }
 
 .date-header .day-panel {
     font-weight: 500;
     font-size: 19px;
+    text-transform: uppercase;
 }
 
 .date-header .date-panel {

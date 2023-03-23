@@ -16,20 +16,20 @@
         <!-- Content -->
         <div class="date-header">
             <div class="day-panel">
-                <span>WED</span>
+                <span>{{ getCurrentDay() }}</span>
             </div>
             <div class="date-panel">
-                <span>15</span>
+                <span>{{ getCurrentDate() }}</span>
             </div>
             <div class="month-panel">
-                <span>March</span>
+                <span>{{ getCurrentMonth() }}</span>
             </div>
         </div>
 
         <div class="mt-5 task-input w-100">
             <mat-form-field class="w-100">
                 <mat-label>{{ 'home-component.add-task' | translate }}</mat-label>
-                <input matInput>
+                <input type="text" matInput (keyup.enter)="openDestinationsDialog()" [(ngModel)]="newDestinationName">
             </mat-form-field>
         </div>
 
@@ -38,48 +38,20 @@
         </div>
 
         <ul class="travel-list mt-3 mb-5 animate__animated animate__slideInUp animate__faster">
-            <li class="travel-list-item" matRipple>
+            <li class="travel-list-item" matRipple *ngFor="let destination of upcomingDestinations">
                 <div class="travel-list-item-panel">
                     <mat-checkbox class="list-item-checkbox"></mat-checkbox>
                     <div class="list-item-info-panel">
                         <mat-chip-set>
                             <mat-chip class="travel-list-tag-box travel-list-country-box">
                                 <i class="bi bi-globe-americas"></i>
-                                Europe
+                                {{ destination.continent }}
                             </mat-chip>
-                            <mat-chip class="travel-list-tag-box">
-                                #test
-                            </mat-chip>
-                            <mat-chip class="travel-list-tag-box">
-                                #test
-                            </mat-chip>
+                            <mat-chip class="travel-list-tag-box" >
+                                #{{ destination.tag.name }}
+                             </mat-chip>
                         </mat-chip-set>
-                        <p>Vienna</p>
-                    </div>
-                    <div class="travel-list-action-panel">
-                        <button mat-mini-fab color="warn">
-                            <mat-icon>delete</mat-icon>
-                        </button>
-                    </div>
-                </div>
-            </li>
-            <li class="travel-list-item" matRipple>
-                <div class="travel-list-item-panel">
-                    <mat-checkbox class="list-item-checkbox"></mat-checkbox>
-                    <div class="list-item-info-panel">
-                        <mat-chip-set>
-                            <mat-chip class="travel-list-tag-box travel-list-country-box">
-                                <i class="bi bi-globe-americas"></i>
-                                Europe
-                            </mat-chip>
-                            <mat-chip class="travel-list-tag-box">
-                                #test
-                            </mat-chip>
-                            <mat-chip class="travel-list-tag-box">
-                                #test
-                            </mat-chip>
-                        </mat-chip-set>
-                        <p>Vienna</p>
+                        <p>{{ destination.destination }}</p>
                     </div>
                     <div class="travel-list-action-panel">
                         <button mat-mini-fab color="warn">

@@ -2,10 +2,10 @@
 <div mat-dialog-content>
   <p>{{ 'list-dialog.label' | translate }}</p>
   <mat-form-field class="w-100">
-    <input matInput>
+    <input matInput [(ngModel)]="name">
   </mat-form-field>
 </div>
 <div mat-dialog-actions class="float-end p-3">
   <button (click)="closeDialog()" mat-raised-button color="accent">{{ 'list-dialog.cancel' | translate }}</button>
-  <button mat-raised-button color="primary">{{ 'list-dialog.save' | translate }}</button>
+  <button (click)="createList()" mat-raised-button color="primary">{{ 'list-dialog.save' | translate }}</button>
 </div>
