@@ -27,13 +27,6 @@
                 {{ 'sidebar-component.privacy-page' | translate }}    
             </div>
         </li>
-        <li id="download-item" class="sidebar-menu-item">
-        <li id="download-item" class="sidebar-menu-item" [routerLinkActive]="'active'" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
-            <div class="sidebar-menu-item-container">
-                <i class="bi bi-cloud-fill"></i>
-                {{ 'sidebar-component.download-page' | translate }}
-            </div>
-        </li>
     </ul>
     <!-- My lists -->
     <div class="sidebar-section-header">
@@ -45,7 +38,7 @@
 
     <ul class="sidebar-menu">
         <li id="home-item" class="sidebar-menu-item">
-        <li *ngFor="let list of availableLists" id="home-item" class="sidebar-menu-item" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
+        <li [routerLink]="'destinations'" [queryParams]="{type: 'list', id: list.id}" [routerLinkActive]="'active'" *ngFor="let list of availableLists" id="home-item" class="sidebar-menu-item" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
             <div class="sidebar-menu-item-container">
                 {{ list.name }}
             </div>
@@ -58,7 +51,7 @@
 
     <ul class="sidebar-menu">
         <li id="home-item" class="sidebar-menu-item">
-        <li *ngFor="let tag of availableTags" id="home-item" class="sidebar-menu-item" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
+        <li [routerLink]="'destinations'" [queryParams]="{type: 'tag', id: tag.id}" [routerLinkActive]="'active'" *ngFor="let tag of availableTags" id="home-item" class="sidebar-menu-item" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
             <div class="sidebar-menu-item-container">
                 #{{ tag.name | translate }}
             </div>
