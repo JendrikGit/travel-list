@@ -1,9 +1,9 @@
 <div class="root-container">
     <div class="destination-content h-100 p-5 container">
         <div class="row h-100">
-            <!-- List of all destinations -->
+            <!-- List of upcoming destinations -->
             <div class="col-lg-6 p-2 list-col">
-                <div class="card w-100 h-100 p-4  animate__animated animate__slideInUp animate__faster" >
+                <div class="card w-100 h-100 p-4  animate__animated animate__slideInUp animate__faster">
                     <div class="card-body">
                         <h1 class="card-header-text">{{ 'destinations-component.header' | translate }}</h1>
                         <mat-accordion>
@@ -14,111 +14,13 @@
                                     </mat-panel-title>
                                 </mat-expansion-panel-header>
                                 <ul class="travel-list mt-3">
-                                    <li class="travel-list-item" active matRipple>
+                                    <li class="travel-list-item" active matRipple
+                                        *ngFor="let destination of upcomingDestinations"
+                                        (click)="selectedDestination = destination">
                                         <div class="travel-list-item-panel">
-                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
                                             <div class="list-item-info-panel">
-                                                <p>Vienna</p>
-                                                <p class="continent">Europe</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="travel-list-item" matRipple>
-                                        <div class="travel-list-item-panel">
-                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
-                                            <div class="list-item-info-panel">
-                                                <p>Berlin</p>
-                                                <p class="continent">Europe</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="travel-list-item" matRipple>
-                                        <div class="travel-list-item-panel">
-                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
-                                            <div class="list-item-info-panel">
-                                                <p>Seattle</p>
-                                                <p class="continent">Noth America</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="travel-list-item" matRipple>
-                                        <div class="travel-list-item-panel">
-                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
-                                            <div class="list-item-info-panel">
-                                                <p>Seattle</p>
-                                                <p class="continent">Noth America</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="travel-list-item" matRipple>
-                                        <div class="travel-list-item-panel">
-                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
-                                            <div class="list-item-info-panel">
-                                                <p>Seattle</p>
-                                                <p class="continent">Noth America</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="travel-list-item" matRipple>
-                                        <div class="travel-list-item-panel">
-                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
-                                            <div class="list-item-info-panel">
-                                                <p>Seattle</p>
-                                                <p class="continent">Noth America</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="travel-list-item" matRipple>
-                                        <div class="travel-list-item-panel">
-                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
-                                            <div class="list-item-info-panel">
-                                                <p>Seattle</p>
-                                                <p class="continent">Noth America</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="travel-list-item" matRipple>
-                                        <div class="travel-list-item-panel">
-                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
-                                            <div class="list-item-info-panel">
-                                                <p>Seattle</p>
-                                                <p class="continent">Noth America</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="travel-list-item" matRipple>
-                                        <div class="travel-list-item-panel">
-                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
-                                            <div class="list-item-info-panel">
-                                                <p>Seattle</p>
-                                                <p class="continent">Noth America</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="travel-list-item" matRipple>
-                                        <div class="travel-list-item-panel">
-                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
-                                            <div class="list-item-info-panel">
-                                                <p>Seattle</p>
-                                                <p class="continent">Noth America</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="travel-list-item" matRipple>
-                                        <div class="travel-list-item-panel">
-                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
-                                            <div class="list-item-info-panel">
-                                                <p>Seattle</p>
-                                                <p class="continent">Noth America</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="travel-list-item" matRipple>
-                                        <div class="travel-list-item-panel">
-                                            <mat-checkbox class="list-item-checkbox"></mat-checkbox>
-                                            <div class="list-item-info-panel">
-                                                <p>Seattle</p>
-                                                <p class="continent">Noth America</p>
+                                                <p>{{ destination.destination }}</p>
+                                                <p class="continent">{{ destination.continent }}</p>
                                             </div>
                                         </div>
                                     </li>
@@ -131,12 +33,12 @@
                                     </mat-panel-title>
                                 </mat-expansion-panel-header>
                                 <ul class="travel-list mt-3">
-                                    <li class="travel-list-item" matRipple>
+                                    <li class="travel-list-item" matRipple *ngFor="let destination of pastDestinations">
                                         <div class="travel-list-item-panel">
                                             <mat-checkbox class="list-item-checkbox"></mat-checkbox>
                                             <div class="list-item-info-panel">
-                                                <p>Vienna</p>
-                                                <p class="continent">Europe</p>
+                                                <p>{{ destination.destination }}</p>
+                                                <p class="continent">{{ destination.continent }}</p>
                                             </div>
                                         </div>
                                     </li>
@@ -149,37 +51,42 @@
 
             <!-- Destination inspector -->
             <div class="col-lg-6 p-2 inspector-col">
-                <div class="card w-100  h-100 p-4 animate__animated animate__slideInUp animate__faster animate__delay-100ms">
-                    <div class="card-body">
+                <div
+                    class="card w-100  h-100 p-4 animate__animated animate__slideInUp animate__faster animate__delay-100ms">
+                    <div class="card-body" *ngIf="selectedDestination != undefined">
                         <mat-chip-set>
                             <mat-chip class="travel-list-tag-box travel-list-country-box">
                                 <i class="bi bi-globe-americas"></i>
-                                Europe
+                                {{ selectedDestination.continent }}
                             </mat-chip>
                         </mat-chip-set>
-                        <h1>Vienna</h1>
+                        <h1>{{ selectedDestination.destination }}</h1>
 
                         <h3 class="mt-4">{{ 'destinations-component.lists' | translate }}</h3>
                         <mat-chip-listbox>
                             <mat-chip-option selected>Personal</mat-chip-option>
-                            <mat-chip-option>Work</mat-chip-option>
+                            <mat-chip-option [selected]="list.id == selectedDestination.list.id"
+                                *ngFor="let list of availableLists">{{ list.name }}</mat-chip-option>
                         </mat-chip-listbox>
 
                         <h3 class="mt-4">{{ 'destinations-component.tags' | translate }}</h3>
                         <mat-chip-listbox>
                             <mat-chip-option selected>Priority</mat-chip-option>
-                            <mat-chip-option>Vacation</mat-chip-option>
+                            <mat-chip-option [selected]="tag.id == selectedDestination.tag.id"
+                                *ngFor="let tag of availableTags">{{ tag.name }}</mat-chip-option>
                         </mat-chip-listbox>
 
                         <h3 class="mt-4">{{ 'destinations-component.notes' | translate }}</h3>
                         <mat-form-field class="w-100">
                             <mat-label>{{ 'destinations-component.notes-placeholder' | translate }}</mat-label>
-                            <textarea rows="5" matInput></textarea>
+                            <textarea rows="5" matInput [(ngModel)]="selectedDestination.notes"></textarea>
                         </mat-form-field>
 
                         <div class="w-100">
-                            <button class="me-2" mat-raised-button color="warn">{{ 'destinations-component.delete' | translate}}</button>
-                            <button mat-raised-button color="primary">{{ 'destinations-component.mark-done' | translate}}</button>
+                            <button class="me-2" mat-raised-button color="warn">{{ 'destinations-component.delete' |
+                                translate}}</button>
+                            <button mat-raised-button color="primary">{{ 'destinations-component.mark-done' |
+                                translate}}</button>
                         </div>
                     </div>
                 </div>

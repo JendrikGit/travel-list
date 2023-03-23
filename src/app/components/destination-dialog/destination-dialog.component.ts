@@ -50,7 +50,7 @@ export class DestinationDialogComponent {
     public dialogRef: MatDialogRef<DestinationDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
 
-      this.initializeDialog();
+    this.initializeDialog();
   }
 
   private initializeDialog(): void {
@@ -82,9 +82,9 @@ export class DestinationDialogComponent {
    */
   public saveDestination(): void {
     // Check if required fields are provided.
-    if(this.destinationName == '' || this.continentName == '' ||
+    if (this.destinationName == '' || this.continentName == '' ||
       this.tag == undefined || this.list == undefined) {
-        return;
+      return;
     }
 
     this.destinationsService.addDestination({
@@ -95,6 +95,7 @@ export class DestinationDialogComponent {
       tag: this.tag!,
       list: this.list!,
       continent: this.continentName!
+      notes: ''
     });
 
     this.closeDialog();
