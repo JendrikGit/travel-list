@@ -23,20 +23,22 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
     SidebarComponent,
+    ListDialogComponent,
+    TagsDialogComponent,
+    DestinationDialogComponent,
+    AnimDialogComponent,
+    DetailsDialogComponent
   ],
-
-
   imports: [
+    CommonModule,
+    SharedModule,
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
     BrowserAnimationsModule,
-    CommonModule,
-    FormsModule,
     HttpClientModule,
-    // Wird für Übersetzung benötigt
+    // Module needed for translation
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {
@@ -45,7 +47,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
         deps: [HttpClient]
       }
     }),
-    LottieAnimModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
@@ -56,7 +57,13 @@ import { ServiceWorkerModule } from '@angular/service-worker';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+
+export class AppModule {   constructor(
+  private listsService: ListsService,
+  private tagsService: TagsService,
+  private destinationsService: DestinationService) {
+}}
 // AoT erfordert eine exportierte Funktion für Factories.  
 // LDie Lokalisierung wird aus dem Ordner assets/localization geladen.
 // Benennungsschema: en.json | de.json | fr.json
