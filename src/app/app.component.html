@@ -1,8 +1,12 @@
-<router-outlet></router-outlet>
 <div class="root-container">
 
+    <button mat-icon-button color="primary" class="sidebar-button" (click)="isSidebarToggled = !isSidebarToggled">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+
     <!-- Sidebar -->
-    <div class="sidebar-container">
+    <div class="sidebar-container" [ngClass]="{'visible': isSidebarToggled}">
         <app-sidebar></app-sidebar>
     </div>
 
@@ -10,4 +14,6 @@
     <div class="content-container">
         <router-outlet></router-outlet>
     </div>
+    
+    <div *ngIf="isSidebarToggled" class="sidebar-overlay" (click)="isSidebarToggled = false"></div>
 </div>

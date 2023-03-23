@@ -1,3 +1,16 @@
+@media only screen and (max-width: 1000px) {
+    .sidebar-container {
+        position: fixed;
+        left: calc(-1 * var(--sidebar-width));
+        height: 100%;
+        z-index: 10;
+    }
+
+    .sidebar-button {
+        display: block !important;
+    }
+}
+
 .root-container {
     width: 100%;
     height: 100%;
@@ -8,4 +21,31 @@
     width: 100%;
     overflow: hidden;
     max-height: 100%;
+}
+
+.sidebar-container {
+    transition: all .2s ease;
+}
+
+.sidebar-container.visible {
+    left: 0;
+}
+
+.sidebar-button {
+    position: relative !important;
+    top: 35px !important;
+    left: 20px !important;
+    display: none;
+    z-index: 20;
+}
+
+.sidebar-overlay {
+    background-color: black;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
 }

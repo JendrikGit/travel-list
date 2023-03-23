@@ -10,4 +10,9 @@ import { TagsService } from './services/tags.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+    /**
+   * Gets or sets if sidebar is toggled in narrow mode.
+   */
+    public isSidebarToggled: boolean = false;
 }
+
