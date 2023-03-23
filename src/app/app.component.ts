@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { DestinationService } from './services/destination.service';
+import { ListsService } from './services/lists.service';
+import { TagsService } from './services/tags.service';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'travel-list';
 }

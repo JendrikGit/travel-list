@@ -18,6 +18,10 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { ListDialogComponent } from './components/list-dialog/list-dialog.component';
 import { TagsDialogComponent } from './components/tags-dialog/tags-dialog.component';
+import { DestinationDialogComponent } from './components/destination-dialog/destination-dialog.component';
+import { ListsService } from './services/lists.service';
+import { TagsService } from './services/tags.service';
+import { DestinationService } from './services/destination.service';
 
 
 
@@ -27,7 +31,8 @@ import { TagsDialogComponent } from './components/tags-dialog/tags-dialog.compon
     TestComponent,
     SidebarComponent,
     ListDialogComponent,
-    TagsDialogComponent
+    TagsDialogComponent,
+    DestinationDialogComponent,
   ],
 
 
@@ -53,7 +58,13 @@ import { TagsDialogComponent } from './components/tags-dialog/tags-dialog.compon
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(
+    private listsService: ListsService,
+    private tagsService: TagsService,
+    private destinationsService: DestinationService) {
+  }
+ }
 // AoT erfordert eine exportierte Funktion für Factories.  
 // LDie Lokalisierung wird aus dem Ordner assets/localization geladen.
 // Benennungsschema: en.json | de.json | fr.json
