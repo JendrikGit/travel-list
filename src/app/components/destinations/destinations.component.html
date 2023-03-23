@@ -66,7 +66,7 @@
                                     <li class="travel-list-item"
                                         [ngClass]="{'active': selectedDestination != undefined && selectedDestination.id == destination.id}"
                                         matRipple *ngFor="let destination of pastDestinations"
-                                        (click)="selectedDestination = destination">
+                                        (click)="selectedDestination = destination; showDetailsDialog(destination);">
                                         <div class="travel-list-item-panel">
                                             <mat-checkbox (ngModelChange)="completeDestination(destination, $event)"
                                                 [(ngModel)]="destination.done"

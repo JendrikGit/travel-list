@@ -25,8 +25,8 @@
       </mat-chip-listbox>
     </div>
   </div>
-  <div mat-dialog-actions class="float-end p-3">
-    <button (click)="closeDialog()" mat-raised-button color="accent">{{ 'destinations-dialog.cancel' | translate }}</button>
-    <button [disabled]="!canSave()" (click)="saveDestination()" mat-raised-button color="primary">{{ 'destinations-dialog.save' | translate }}</button>
+  <div class="float-end p-3">
+    <button class="me-2 mb-2" (click)="closeDialog()" mat-raised-button color="accent">{{ 'destinations-dialog.cancel' | translate }}</button>
+    <button class="mb-2" [disabled]="!canSave()" (click)="saveDestination()" mat-raised-button color="primary">{{ 'destinations-dialog.save' | translate }}</button>
   </div>
 </mat-dialog-content>
