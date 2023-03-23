@@ -69,10 +69,7 @@ export class DestinationsComponent {
       let id = params['id'];
       this.selectedDestination = undefined;
       
-      setTimeout(() => {
-        this.isLoading = false;
-        this.initializeData(type, id);
-      }, 1000);
+      this.initializeData(type, id);
     });
   }
   public ngOnInit(): void {
@@ -80,25 +77,33 @@ export class DestinationsComponent {
   private initializeData(type: string | undefined = undefined, id: string | undefined = undefined): void {
     this.getUpcomingDestinations(type, id);
     this.getPastDestinations(type, id);
-    this.listsService.getLists().subscribe(result => {
-      this.availableLists = result.map((item) => {
-        return item._data;
-      })
-    });
-    this.tagsService.getTags().subscribe(result => {
-      this.availableTags = result.map((item) => {
-        return item._data;
-      })
-    });
+    setTimeout(() => {
+      this.listsService.getLists().subscribe(result => {
+        this.availableLists = result.map((item) => {
+          return item._data;
+        })
+      });
+    }, this.listsService.isInitialized ? 0 : 1000);
+    setTimeout(() => {
+      this.tagsService.getTags().subscribe(result => {
+        this.availableTags = result.map((item) => {
+          return item._data;
+        })
+      });
+    }, this.tagsService.isInitialized ? 0 : 1000);
   }
   /**
    * Gets upcoming destinations.
    */
   private getUpcomingDestinations(type: string | undefined = undefined, id: string | undefined = undefined): void {
-    this.destinationsService.getUpcomingDestinations(type, id).subscribe(result => {
-      this.upcomingDestinations = result.map((val) => {
-        return val._data;
-      });
+    setTimeout(() => {
+      this.destinationsService.getUpcomingDestinations(type, id).subscribe(result => {
+        this.upcomingDestinations = result.map((val) => {
+          return val._data;
+        });
+
+      }, this.destinationsService.isInitialized ? 0 : 1000);
+
       if(type != undefined) {
         this.upcomingDestinations = this.upcomingDestinations.filter(x => type == 'list' ? (x.list.id == id) : (x.tag.id == id));
       }
@@ -109,10 +114,14 @@ export class DestinationsComponent {
    * Gets upcoming destinations.
    */
   private getPastDestinations(type: string | undefined = undefined, id: string | undefined = undefined): void {
-    this.destinationsService.getPastDestinations(type, id).subscribe(result => {
-      this.pastDestinations = result.map((val) => {
-        return val._data;
-      });
+    setTimeout(() => {
+      this.destinationsService.getPastDestinations(type, id).subscribe(result => {
+        this.pastDestinations = result.map((val) => {
+          return val._data;
+        });
+
+        this.isLoading = false;
+      }, this.destinationsService.isInitialized ? 0 : 1000);
 
       if(type != undefined) {
  this.pastDestinations = this.pastDestinations.filter(x => type == 'list' ? (x.list.id == id) : (x.tag.id == id));

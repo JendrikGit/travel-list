@@ -27,7 +27,7 @@
 
         <div class="w-100">
             <button (click)="deleteDestination();" class="mb-2" mat-raised-button color="warn">{{ 'destinations-component.delete' | translate}}</button>
-            <button class="mb-2" (click)="completeDestination(selectedDestination, !selectedDestination.done)" mat-raised-button color="primary">{{ 'destinations-component.mark-done' | translate}}</button>
+            <button class="mb-2" (click)="completeDestination(selectedDestination, !selectedDestination.done)" mat-raised-button color="primary">{{selectedDestination.done ? ( 'destinations-component.mark-undone' | translate) : ('destinations-component.mark-done' | translate)}}</button>
         </div>
     </div>
 </mat-dialog-content>

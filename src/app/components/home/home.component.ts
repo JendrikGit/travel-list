@@ -31,9 +31,9 @@ export class HomeComponent {
   constructor(
     private destinationsService: DestinationService,
     public dialog: MatDialog) {
-      setTimeout(() => {
+
         this.getUpcomingDestinations();
-      }, 1000);
+     
   }
 
   public ngOnInit(): void {
@@ -44,11 +44,14 @@ export class HomeComponent {
    * Gets upcoming destinations.
    */
   private getUpcomingDestinations(): void {
-    this.destinationsService.getUpcomingDestinations().subscribe(result => {
-      this.upcomingDestinations = result.map((val) => {
-        return val._data;
+    setTimeout(() => {
+      this.destinationsService.getUpcomingDestinations().subscribe(result => {
+        this.upcomingDestinations = result.map((val) => {
+          return val._data;
+        });
       });
-    });
+      this.isLoading = false;
+    }, this.destinationsService.isInitialized ? 0 : 1000);
   }
 
   /**

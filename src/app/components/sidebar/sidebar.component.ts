@@ -16,12 +16,10 @@ import { TagsDialogComponent } from '../dialogs/tags-dialog/tags-dialog.componen
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-
   /**
    * Light theme by default.
    */
   public isLightTheme: boolean = true;
-
   /**
    * Gets or sets list of all available lists.
    */
@@ -46,35 +44,42 @@ export class SidebarComponent {
       document.querySelector('html')?.setAttribute('data-theme', this.isLightTheme == true ? 'light' : 'dark');
     }
 
-    setTimeout(() => {
-      this.initializeSidebar();
-    }, 1000);
+ this.initializeSidebar();
   }
+
   public ngAfterViewInit(): void {
   }
+
   private initializeSidebar(): void {
-    this.listsService.getLists().subscribe(result => {
-      this.availableLists = result.map((item) => {
-        return item._data;
-      })
-    });
-    this.tagsService.getTags().subscribe(result => {
-      this.availableTags = result.map((item) => {
-        return item._data;
-      })
-    });
-    this.destinationsService.getUpcomingDestinations().subscribe(result => {
-      this.destinationCount = result.length;
-    });
-  }
+setTimeout(() => {
+      this.listsService.getLists().subscribe(result => {
+        this.availableLists = result.map((item) => {
+          return item._data;
+        })
+      });
+    }, this.listsService.isInitialized ? 0 : 1000);
+setTimeout(() => {
+      this.tagsService.getTags().subscribe(result => {
+        this.availableTags = result.map((item) => {
+          return item._data;
+        })
+      });
+    }, this.tagsService.isInitialized ? 0 : 1000);
+
+    setTimeout(() => {     
+      this.destinationsService.getUpcomingDestinations().subscribe(result => {
+        this.destinationCount = result.length;
+      });
+    }, this.destinationsService.isInitialized ? 0 : 1000);
+}
+
   /**
    * Opens dialog for adding new list.
    */
   public openListDialog(): void {
     const dialogRef = this.dialog.open(ListDialogComponent);
-
     dialogRef.afterClosed().subscribe(result => {
-  if (result != undefined) {
+      if (result != undefined) {
         // Play animation
         this.dialog.open(AnimDialogComponent);
       }
@@ -85,9 +90,8 @@ export class SidebarComponent {
    */
   public openTagsDialog(): void {
     const dialogRef = this.dialog.open(TagsDialogComponent);
-
     dialogRef.afterClosed().subscribe(result => {
-if (result != undefined) {
+ if (result != undefined) {
         // Play animation
         this.dialog.open(AnimDialogComponent);
       }
@@ -99,7 +103,6 @@ if (result != undefined) {
   public closeSidebar(): void {
     AppComponent.isSidebarToggled = false;
   }
-
   /**
    * Toggles application theme.
    */
