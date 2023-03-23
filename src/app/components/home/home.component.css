@@ -62,4 +62,9 @@ h1 {
 .date-header .month-panel {
     font-weight: 400;
     font-size: 19px;
+    color: var(--body-color-variant);
 }
+
+
+
+
