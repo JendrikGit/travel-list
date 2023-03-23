@@ -7,8 +7,7 @@
                     <div class="card-body">
                         <h1 class="card-header-text">{{ 'destinations-component.header' | translate }}</h1>
                         <div *ngIf="isLoading" class="text-center">
-                            <lib-lottie-anim [width]="'250px'" [segments]="[5, 60]" [loop]="true"
-                                [path]="'assets/animations/loading-anim.json'" [autoplay]="true"></lib-lottie-anim>
+                            <!--kann gelöscht werden, wenn Lade-Anzeige nicht angezeigt werden soll-->
                             <h1 class="animate__animated animate__faster animate__slideInUpBig">{{
                                 'home-component.loading' | translate }}</h1>
                         </div>
