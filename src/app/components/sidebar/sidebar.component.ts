@@ -7,7 +7,6 @@ import { ITag } from 'src/app/models/tag.interface';
 import { DestinationService } from 'src/app/services/destination.service';
 import { ListsService } from 'src/app/services/lists.service';
 import { TagsService } from 'src/app/services/tags.service';
-import { AnimDialogComponent } from '../dialogs/anim-dialog/anim-dialog.component';
 import { ListDialogComponent } from '../dialogs/list-dialog/list-dialog.component';
 import { TagsDialogComponent } from '../dialogs/tags-dialog/tags-dialog.component';
 @Component({
@@ -78,24 +77,14 @@ setTimeout(() => {
    */
   public openListDialog(): void {
     const dialogRef = this.dialog.open(ListDialogComponent);
-    dialogRef.afterClosed().subscribe(result => {
-      if (result != undefined) {
-        // Play animation
-        this.dialog.open(AnimDialogComponent);
-      }
-    });
+    
   }
   /**
    * Opens dialog for adding new tag.
    */
   public openTagsDialog(): void {
     const dialogRef = this.dialog.open(TagsDialogComponent);
-    dialogRef.afterClosed().subscribe(result => {
- if (result != undefined) {
-        // Play animation
-        this.dialog.open(AnimDialogComponent);
-      }
-    });
+   
   }
   /**
    * Closes sidebar in narrow mode.

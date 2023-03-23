@@ -8,7 +8,9 @@
         "personal-list": "Personal",
         "work-list": "Work",
         "tags-page": "Tags",
-        "priority": "Priority"
+        "priority": "Priority",
+        "toggle-theme": "Toggle theme"
+
     },
     "home-component": {
         "greeting-message": "Good Evening, Heiko",

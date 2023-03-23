@@ -1,7 +1,6 @@
 @import url('node_modules/bootstrap-icons/font/bootstrap-icons.css');
 @import url('variables.css');
 @import url('theme/light.css');
-@import url('animate.css');
 @import url('theme/dark.css');
 
 
@@ -10,31 +9,7 @@
     src: url('assets/fonts/Inter.ttf') format('truetype');
 }
 
-@keyframes slideInUp {
-    0% {
-        transform: translate3d(0, 5%, 0);
-        opacity: 0;
-        visibility: visible;
-    }
 
-    100% {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideInUpBig {
-    0% {
-        transform: translate3d(0, 50%, 0);
-        opacity: 0;
-        visibility: visible;
-    }
-
-    100% {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
-}
 
 @media only screen and (max-width: 700px) {
     .list-item-checkbox {

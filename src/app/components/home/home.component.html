@@ -32,9 +32,8 @@
             <h1 class="greeting-message">{{ 'home-component.upcoming' | translate }}</h1>
         </div>
 
-        <div *ngIf="isLoading" class="text-center">
-     <lib-lottie-anim [width]="'250px'" [segments]="[5, 60]" [loop]="true" [path]="'assets/animations/loading-anim.json'" [autoplay]="true"></lib-lottie-anim>
-            <h1 class="animate_animated animatefaster animate_slideInUpBig">{{ 'home-component.loading' | translate }}</h1>
+        <div *ngIf="isLoading" class="text-center mt-5 mb-5">
+            <h1 class="animate__animated animate__faster animate__slideInUpBig">{{ 'home-component.loading' | translate }}...</h1>
         </div>
 
         <div *ngIf="!isLoading && upcomingDestinations.length == 0" class="text-center mt-5" [@opacityAnimation]="'in'">

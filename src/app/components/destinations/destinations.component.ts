@@ -6,30 +6,16 @@ import { ITag } from 'src/app/models/tag.interface';
 import { DestinationService } from 'src/app/services/destination.service';
 import { ListsService } from 'src/app/services/lists.service';
 import { TagsService } from 'src/app/services/tags.service';
-import { AnimDialogComponent } from '../dialogs/anim-dialog/anim-dialog.component';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { ActivatedRoute } from '@angular/router';
 import { DetailsDialogComponent } from '../dialogs/details-dialog/details-dialog.component';
+
 @Component({
   selector: 'app-destinations',
   templateUrl: './destinations.component.html',
-  styleUrls: ['./destinations.component.css'],
-  animations: [
-    // the scale/fade-in/fade-out animation.
-    trigger('scaleFadeAnimation', [
-      // the "in" style determines the "resting" state of the element when it is visible.
-      state('in', style({ opacity: 1 })),
-      // fade in when created. this could also be written as transition('void => *')
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate(200)
-      ]),
-      // fade out when destroyed. this could also be written as transition('void => *')
-      transition(':leave',
-        animate(300, style({ opacity: 0, transform: 'scale(0.7)' })))
-    ])
-  ]
+  styleUrls: ['./destinations.component.css']
 })
+
 export class DestinationsComponent {
   /**
  * Gets or sets if data is being loaded.
@@ -133,10 +119,7 @@ export class DestinationsComponent {
    */
   public deleteDestination(): void {
     this.destinationsService.deleteDestination(this.selectedDestination!);
-    // Play animation
-    this.dialog.open(AnimDialogComponent, {
-      data: 'delete'
-    });
+
   }
   /**
    * Completes selected destination.
