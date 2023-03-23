@@ -9,6 +9,7 @@ import { TagsService } from 'src/app/services/tags.service';
 import { AnimDialogComponent } from '../dialogs/anim-dialog/anim-dialog.component';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { ActivatedRoute } from '@angular/router';
+import { DetailsDialogComponent } from '../dialogs/details-dialog/details-dialog.component';
 
 @Component({
   selector: 'app-destinations',
@@ -139,7 +140,7 @@ public selectedDestination: IDestination | undefined;
    */
   public deleteDestination(): void {
     this.destinationsService.deleteDestination(this.selectedDestination!);
-    // Play animation
+    // Play animation 
     this.dialog.open(AnimDialogComponent, {
       data: 'delete'
     });
@@ -170,5 +171,18 @@ public selectedDestination: IDestination | undefined;
    */
   public updateNotes(newValue: string): void {
     this.destinationsService.setNotes(this.selectedDestination!, newValue);
+  }
+  /**
+   * Shows details dialog about selected destination
+   * if display is in narrow mode.
+   */
+  public showDetailsDialog(destination: IDestination): void {
+    let width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if(width > 1200)
+      return;
+
+    this.dialog.open(DetailsDialogComponent, {
+      data: { destination: destination}
+    });
   }
 }

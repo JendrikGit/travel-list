@@ -1,30 +1,32 @@
-<h1 mat-dialog-title>{{ 'destinations-dialog.header' | translate }}</h1>
-<div mat-dialog-content>
-  <p>{{ 'destinations-dialog.label' | translate }}</p>
-  <mat-form-field class="w-100">
-    <mat-label>{{ 'destinations-dialog.target-dest' | translate }}</mat-label>
-    <input type="text" matInput [(ngModel)]="destinationName">
-  </mat-form-field>
-
-  <mat-form-field class="w-100">
-    <mat-label>{{ 'destinations-dialog.target-continent' | translate }}</mat-label>
-    <input type="text" matInput [(ngModel)]="continentName">
-  </mat-form-field>
-
-  <mat-form-field class="w-100">
-    <mat-label>{{ 'destinations-dialog.target-list' | translate }}</mat-label>
-    <mat-select [(ngModel)]="list">
-      <mat-option ngFor="let list of availableLists" [value]="list">{{ list.name }}</mat-option>
-    </mat-select>
-  </mat-form-field>
+<mat-dialog-content class="dialog-root">
+  <h1>{{ 'destinations-dialog.header' | translate }}</h1>
   <div>
-    <h3 class="mt-4">{{ 'destinations-component.tags' | translate }}</h3>
-    <mat-chip-listbox [(ngModel)]="tag">
-      <mat-chip-optionngFor="let tag of availableTags" [value]="tag">{{ tag.name }}</mat-chip-option>
-    </mat-chip-listbox>
+    <p>{{ 'destinations-dialog.label' | translate }}</p>
+    <mat-form-field class="w-100">
+      <mat-label>{{ 'destinations-dialog.target-dest' | translate }}</mat-label>
+      <input type="text" matInput [(ngModel)]="destinationName">
+    </mat-form-field>
+  
+    <mat-form-field class="w-100">
+      <mat-label>{{ 'destinations-dialog.target-continent' | translate }}</mat-label>
+      <input type="text" matInput [(ngModel)]="continentName">
+    </mat-form-field>
+  
+    <mat-form-field class="w-100">
+      <mat-label>{{ 'destinations-dialog.target-list' | translate }}</mat-label>
+      <mat-select [(ngModel)]="list">
+        <mat-option *ngFor="let list of availableLists" [value]="list">{{ list.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div>
+      <h3 class="mt-4">{{ 'destinations-component.tags' | translate }}</h3>
+      <mat-chip-listbox [(ngModel)]="tag">
+        <mat-chip-option *ngFor="let tag of availableTags" [value]="tag">{{ tag.name }}</mat-chip-option>
+      </mat-chip-listbox>
+    </div>
   </div>
-</div>
-<div mat-dialog-actions class="float-end p-3">
-  <button (click)="closeDialog()" mat-raised-button color="accent">{{ 'destinations-dialog.cancel' | translate }}</button>
-  <button (click)="saveDestination()" mat-raised-button color="primary">{{ 'destinations-dialog.save' | translate }}</button>
-</div>
+  <div mat-dialog-actions class="float-end p-3">
+    <button (click)="closeDialog()" mat-raised-button color="accent">{{ 'destinations-dialog.cancel' | translate }}</button>
+    <button [disabled]="!canSave()" (click)="saveDestination()" mat-raised-button color="primary">{{ 'destinations-dialog.save' | translate }}</button>
+  </div>
+</mat-dialog-content>

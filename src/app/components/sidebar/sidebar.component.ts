@@ -62,7 +62,7 @@ export class SidebarComponent {
       this.destinationCount = result.length;
     });
   }
-
+  
   /**
 * Opens dialog for adding new list.
 */

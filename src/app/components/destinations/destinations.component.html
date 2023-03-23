@@ -7,7 +7,7 @@
                     <div class="card-body">
                         <h1 class="card-header-text">{{ 'destinations-component.header' | translate }}</h1>
                         <div *ngIf="isLoading" class="text-center">
-                            <lib-lottie-anim [width]="'350px'" [segments]="[5, 60]" [loop]="true"
+                            <lib-lottie-anim [width]="'250px'" [segments]="[5, 60]" [loop]="true"
                                 [path]="'assets/animations/loading-anim.json'" [autoplay]="true"></lib-lottie-anim>
                             <h1 class="animate__animated animate__faster animate__slideInUpBig">{{
                                 'home-component.loading' | translate }}</h1>
@@ -20,7 +20,7 @@
                                     </mat-panel-title>
                                 </mat-expansion-panel-header>
                                 <div *ngIf="!isLoading && upcomingDestinations.length == 0" class="text-center mt-5">
-                                    <lib-lottie-anim [width]="'350px'" [segments]="[0, 146]"
+                                    <lib-lottie-anim [width]="'250px'" [segments]="[0, 146]"
                                         [path]="'assets/animations/schedule-anim.json'"
                                         [autoplay]="true"></lib-lottie-anim>
                                     <h1 class="animate__animated animate__faster animate__slideInUpBig">{{
@@ -33,7 +33,7 @@
                                     <li class="travel-list-item"
                                         [ngClass]="{'active': selectedDestination != undefined && selectedDestination.id == destination.id}"
                                         matRipple *ngFor="let destination of upcomingDestinations"
-                                        (click)="selectedDestination = destination">
+                                        (click)="selectedDestination = destination; showDetailsDialog(destination);">
                                         <div class="travel-list-item-panel">
                                             <mat-checkbox (ngModelChange)="completeDestination(destination, $event)"
                                                 [(ngModel)]="destination.done"
@@ -53,7 +53,7 @@
                                     </mat-panel-title>
                                 </mat-expansion-panel-header>
                                 <div *ngIf="!isLoading && pastDestinations.length == 0" class="text-center mt-5">
-                                    <lib-lottie-anim [width]="'350px'" [segments]="[0, 146]"
+                                    <lib-lottie-anim [width]="'150px'" [segments]="[0, 146]"
                                         [path]="'assets/animations/schedule-anim.json'"
                                         [autoplay]="true"></lib-lottie-anim>
                                     <h1 class="animate__animated animate__faster animate__slideInUpBig">{{

@@ -1,3 +1,16 @@
+@media only screen and (max-width: 1200px) {
+    .inspector-col {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .card {
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+}
+
 .root-container {
     position: relative;
     overflow: hidden;

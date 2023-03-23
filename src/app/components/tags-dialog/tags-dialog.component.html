@@ -1,11 +1,14 @@
-<h1 mat-dialog-title>{{ 'tags-dialog.header' | translate }}</h1>
-<div mat-dialog-content>
-  <p>{{ 'tags-dialog.label' | translate }}</p>
-  <mat-form-field class="w-100">
-    <input matInput [(ngModel)]="name">
-  </mat-form-field>
-</div>
-<div mat-dialog-actions class="float-end p-3">
-  <button (click)="closeDialog()" mat-raised-button color="accent">{{ 'tags-dialog.cancel' | translate }}</button>
-  <button (click)="createTag()" mat-raised-button color="primary">{{ 'tags-dialog.save' | translate }}</button>
-</div>
+<mat-dialog-content class="dialog-root">
+  <h1>{{ 'tags-dialog.header' | translate }}</h1>
+  <div>
+    <p>{{ 'tags-dialog.label' | translate }}</p>
+    <mat-form-field class="w-100">
+      <input matInput [(ngModel)]="name">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions class="float-end p-3">
+    <button (click)="closeDialog()" mat-raised-button color="accent">{{ 'tags-dialog.cancel' | translate }}</button>
+    <button [disabled]="!canSave()" (click)="createTag()" mat-raised-button color="primary">{{ 'tags-dialog.save' |
+      translate }}</button>
+  </div>
+</mat-dialog-content>

@@ -26,4 +26,8 @@
 
     /* MAT SELECT */
     --selected-value-color: black;
+    
+    /* DIALOG */
+    --dialog-background-color:  rgb(80, 80, 80);
+    --dialog-color: white;
 }
