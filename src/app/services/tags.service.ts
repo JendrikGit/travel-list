@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { addRxPlugin, createRxDatabase, RxCollection, RxDatabase } from 'rxdb';
 import { getRxStorageDexie } from 'rxdb/plugins/storage-dexie';
 import { BehaviorSubject } from 'rxjs';
-import { listsSchema, tagsSchema } from '../core/schemas/destination-schema.model';
+import { tagsSchema } from '../core/schemas/tags-schema.model';
 import { IList } from '../models/list.interface';
 import { ITag } from '../models/tag.interface';
 

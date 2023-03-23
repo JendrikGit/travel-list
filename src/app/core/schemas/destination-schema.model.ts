@@ -37,47 +37,9 @@ export const destinationsSchema: RxJsonSchema<IDestination> = {
 
         notes: {
             type: 'string'
-        },
-        required: ['id', 'destination', 'continent', 'createdAt', 'tag', 'list', 'done', 'notes']
-    }
-}
-
-/**
- * Collection schema for my lists.
- */
-export const listsSchema: RxJsonSchema<IList> = {
-        title: 'lists schema',
-        version: 0,
-        primaryKey: 'id',
-        type: 'object',
-        properties: {
-            id: {
-                type: 'string',
-                maxLength: 100 // <- the primary key must have set maxLength
-        },
-            name: {
-                type: 'string',
-            },
-        },
-        required: ['id', 'name']
-    }
-
-/**
- * Collection schema for tags.
- */
-export const tagsSchema: RxJsonSchema<ITag> = {
-    title: 'tags schema',
-    version: 0,
-    primaryKey: 'id',
-    type: 'object',
-    properties: {
-        id: {
-            type: 'string',
-            maxLength: 100 // <- the primary key must have set maxLength
-        },
-        name: {
-            type: 'string',
-        },
+        }
+        
     },
-    required: ['id', 'name']
+    required: ['id', 'destination', 'continent', 'createdAt', 'tag', 'list', 'done', 'notes']
 }
+
