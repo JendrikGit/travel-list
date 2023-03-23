@@ -9,8 +9,5 @@ export interface ITag extends IItemBase {
      */
     name: string;
 
-    /**
-     * Gets or sets color of the tag.
-     */
     color: string;
 }

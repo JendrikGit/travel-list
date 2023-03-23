@@ -10,6 +10,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 
 /**
@@ -20,6 +21,7 @@ import {MatSelectModule} from '@angular/material/select';
   imports: [],
   exports: [
     CommonModule,
+    FormsModule,
     TranslateModule,
     MatCheckboxModule,
     MatInputModule,
