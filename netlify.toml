@@ -1,0 +1,8 @@
+[build]
+  publish = "dist/travellist"
+  command = "ng build lottie-anim; ng build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
