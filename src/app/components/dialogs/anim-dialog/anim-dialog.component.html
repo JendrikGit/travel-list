@@ -1,0 +1,6 @@
+<mat-dialog-content class="dialog-root">
+    <div class="anim-panel">
+        <lib-lottie-anim *ngIf="animType == 'success'" (animCompleted)="onAnimCompleted()" [path]="'assets/animations/success-anim.json'" [autoplay]="true"></lib-lottie-anim>
+        <lib-lottie-anim *ngIf="animType == 'delete'"  (animCompleted)="onAnimCompleted()" [path]="'assets/animations/delete-anim.json'" [autoplay]="true"></lib-lottie-anim>
+    </div>
+</mat-dialog-content>

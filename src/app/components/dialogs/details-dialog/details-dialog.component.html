@@ -1,0 +1,33 @@
+<mat-dialog-content class="details-root">
+    <div class="w-100 p-4" *ngIf="selectedDestination != undefined">
+        <mat-chip-set>
+            <mat-chip class="travel-list-tag-box travel-list-country-box">
+                <i class="bi bi-globe-americas"></i>
+                {{ selectedDestination.continent }}
+            </mat-chip>
+        </mat-chip-set>
+        <h1>{{ selectedDestination.destination }}</h1>
+
+        <h3 class="mt-4">{{ 'destinations-component.lists' | translate }}</h3>
+        <mat-chip-listbox>
+ <mat-chip-option (click)="updateList(list);" [selected]="list.id == selectedDestination.list.id" *ngFor="let list of availableLists">{{ list.name }}</mat-chip-option>
+        </mat-chip-listbox>
+
+        <h3 class="mt-4">{{ 'destinations-component.tags' | translate }}</h3>
+        <mat-chip-listbox>
+ <mat-chip-option (click)="updateTag(tag);" [selected]="tag.id == selectedDestination.tag.id" *ngFor="let tag of availableTags">{{ tag.name }}</mat-chip-option>
+        </mat-chip-listbox>
+
+        <h3 class="mt-4">{{ 'destinations-component.notes' | translate }}</h3>
+        <mat-form-field class="w-100">
+            <mat-label>{{ 'destinations-component.notes-placeholder-readonly' | translate }}</mat-label>
+<textarea rows="5" matInput [(ngModel)]="selectedDestination.notes"></textarea>
+        </mat-form-field>
+        <button class="mb-5" (click)="updateNotes(selectedDestination.notes)" mat-raised-button color="primary">{{ 'destinations-component.save-notes' | translate}}</button>
+
+        <div class="w-100">
+            <button (click)="deleteDestination();" class="me-2" mat-raised-button color="warn">{{ 'destinations-component.delete' | translate}}</button>
+            <button (click)="completeDestination(selectedDestination, !selectedDestination.done)" mat-raised-button color="primary">{{ 'destinations-component.mark-done' | translate}}</button>
+        </div>
+    </div>
+</mat-dialog-content>

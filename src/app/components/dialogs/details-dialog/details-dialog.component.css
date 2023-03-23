@@ -1,0 +1,4 @@
+.details-root {
+    background-color: var(--dialog-background-color) !important;
+    color: var(--dialog-color) !important;
+}
