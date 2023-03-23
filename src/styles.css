@@ -134,6 +134,10 @@ body {
     color: var(--travel-list-task-input-label-color);
 }
 
+.mat-mdc-select-value {
+    color: var(--selected-value-color) !important;
+}
+
 .travel-list-tag-box {
     background-color: var(--chip-tag-background-color) !important;
 }
