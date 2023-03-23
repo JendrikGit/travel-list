@@ -2,8 +2,8 @@
     <div class="w-100 p-4" *ngIf="selectedDestination != undefined">
         <mat-chip-set>
             <mat-chip class="travel-list-tag-box travel-list-country-box">
-                <i class="bi bi-globe-americas"></i>
-                {{ selectedDestination.continent }}
+                <i class="continent-chip bi bi-globe-americas me-1"></i>
+                <span class="continent-chip">{{ selectedDestination.continent }}</span>
             </mat-chip>
         </mat-chip-set>
         <h1>{{ selectedDestination.destination }}</h1>
