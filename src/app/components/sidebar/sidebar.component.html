@@ -55,4 +55,25 @@
             </div>
         </li>
     </ul>
+
+    
+    <!-- Theme toggler -->
+    <div class="theme-toggler">
+        <div class="wrapper">
+            <input type="checkbox" [(ngModel)]="isLightTheme" (ngModelChange)="toggleTheme($event)" id="hide-checkbox">
+            <label for="hide-checkbox" class="toggle">
+              <span class="toggle-button">
+                <span class="crater crater-1"></span>
+              </span>
+              <span class="star star-1"></span>
+              <span class="star star-2"></span>
+              <span class="star star-3"></span>
+              <span class="star star-4"></span>
+              <span class="star star-5"></span>
+              <span class="star star-6"></span>
+              <span class="star star-7"></span>
+              <span class="star star-8"></span>
+            </label>
+          </div>
+    </div>
 </div>
