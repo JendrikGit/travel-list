@@ -11,6 +11,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import { LottieAnimModule } from 'lottie-anim';
 
 
 /**
@@ -31,7 +32,8 @@ import { FormsModule } from '@angular/forms';
     MatExpansionModule,
     MatIconModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
+    LottieAnimModule,
   ],
   providers: [],
   bootstrap: []

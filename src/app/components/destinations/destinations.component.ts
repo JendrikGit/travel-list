@@ -78,22 +78,21 @@ export class DestinationsComponent {
       });
     }, this.tagsService.isInitialized ? 0 : 1000);
   }
-  /**
+   /**
    * Gets upcoming destinations.
    */
-  private getUpcomingDestinations(type: string | undefined = undefined, id: string | undefined = undefined): void {
+   private getUpcomingDestinations(type: string | undefined = undefined, id: string | undefined = undefined): void {
     setTimeout(() => {
       this.destinationsService.getUpcomingDestinations(type, id).subscribe(result => {
         this.upcomingDestinations = result.map((val) => {
           return val._data;
         });
-
-      }, this.destinationsService.isInitialized ? 0 : 1000);
-
-      if(type != undefined) {
-        this.upcomingDestinations = this.upcomingDestinations.filter(x => type == 'list' ? (x.list.id == id) : (x.tag.id == id));
-      }
-  });
+  
+        if(type != undefined) {
+          this.upcomingDestinations = this.upcomingDestinations.filter(x => type == 'list' ? (x.list.id == id) : (x.tag.id == id));
+        }
+      });
+    }, this.destinationsService.isInitialized ? 0 : 1000);
   }
 
   /**
@@ -105,14 +104,13 @@ export class DestinationsComponent {
         this.pastDestinations = result.map((val) => {
           return val._data;
         });
-
-        this.isLoading = false;
-      }, this.destinationsService.isInitialized ? 0 : 1000);
-
-      if(type != undefined) {
- this.pastDestinations = this.pastDestinations.filter(x => type == 'list' ? (x.list.id == id) : (x.tag.id == id));
-      }
-    });
+  
+        if(type != undefined) {
+          this.pastDestinations = this.pastDestinations.filter(x => type == 'list' ? (x.list.id == id) : (x.tag.id == id));
+        }
+      });
+      this.isLoading = false;
+    }, this.destinationsService.isInitialized ? 0 : 1000);
   }
   /**
    * Deletes selected destination.

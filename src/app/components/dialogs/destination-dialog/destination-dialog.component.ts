@@ -95,10 +95,23 @@ export class DestinationDialogComponent {
       done: false,
       tag: this.tag!,
       list: this.list!,
-      continent: this.continentName!
+      continent: this.continentName!,
       notes: ''
     });
 
     this.closeDialog();
+  }
+
+  /**
+   * Gets if destination can be saved.
+   * @returns 
+   */
+  public canSave(): boolean {
+    if (this.destinationName == '' || this.continentName == '' ||
+      this.tag == undefined || this.list == undefined) {
+      return false;
+    }
+
+    return true;
   }
 }

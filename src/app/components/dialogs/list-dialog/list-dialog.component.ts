@@ -44,4 +44,16 @@ export class ListDialogComponent {
       this.closeDialog();
     });
   }
+
+    /**
+   * Gets if list can be saved.
+   * @returns 
+   */
+  public canSave(): boolean {
+    if (this.name == '') {
+      return false;
+    }
+
+    return true;
+  }
 }

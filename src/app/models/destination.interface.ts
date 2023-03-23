@@ -25,7 +25,7 @@ export interface IDestination extends IItemBase {
     /**
      * Gets or sets destination tag.
      */
-    tag: ITag[];
+    tag: ITag;
 
     /**
      * Gets or sets list where destination is saved.
