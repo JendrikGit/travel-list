@@ -8,12 +8,15 @@ import { ListsService } from 'src/app/services/lists.service';
 import { TagsService } from 'src/app/services/tags.service';
 import { ListDialogComponent } from '../list-dialog/list-dialog.component';
 import { TagsDialogComponent } from '../tags-dialog/tags-dialog.component';
+import { AppComponent } from 'src/app/app.component';
+
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
+
 export class SidebarComponent {
 
   /**
@@ -91,5 +94,12 @@ export class SidebarComponent {
 
     dialogRef.afterClosed().subscribe(result => {
     });
+  }
+  
+  /**
+   * Closes sidebar in narrow mode.
+   */
+  public closeSidebar(): void {
+    AppComponent.isSidebarToggled = false;
   }
 }

@@ -2,8 +2,9 @@
   "name": "travel-list",
   "short_name": "travel-list",
   "theme_color": "#009543",
-  "background_color": "#fafafa",
+  "background_color": "#009543",
   "display": "standalone",
+  "orientation": "horizontal",
   "scope": "./",
   "start_url": "./",
   "icons": [
