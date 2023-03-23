@@ -10,7 +10,7 @@
     .sidebar-button {
         display: block !important;
     }
-
+}
 
 .root-container {
     width: 100%;
@@ -49,5 +49,4 @@
     right: 0;
     bottom: 0;
 
-}
 }
