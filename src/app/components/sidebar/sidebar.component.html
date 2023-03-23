@@ -7,21 +7,21 @@
     <!-- Sidebar menu -->
     <ul class="sidebar-menu">
         <li id="home-item" class="sidebar-menu-item active">
-        <li [routerLink]="'home'" id="home-item" class="sidebar-menu-item" [routerLinkActive]="'active'" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
+        <li [routerLink]="'home'" id="home-item" class="sidebar-menu-item animate__animated animate__faster animate__slideInUpBig" [routerLinkActive]="'active'" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
             <div class="sidebar-menu-item-container">
                 <i class="bi bi-houses-fill"></i>
                 {{ 'sidebar-component.home-page' | translate }}
             </div>
         </li>
         <li id="list-item" class="sidebar-menu-item">
-        <li [routerLink]="'destinations'" id="list-item" class="sidebar-menu-item" [routerLinkActive]="'active'" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
+        <li [routerLink]="'destinations'" id="list-item" class="sidebar-menu-item animate__animated animate__faster animate__slideInUpBig animate__delay-100ms" [routerLinkActive]="'active'" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
             <div class="sidebar-menu-item-container">
                 <i class="bi bi-grid-1x2-fill"></i>
-                {{ 'sidebar-component.dest-page' | translate }} <span class="badge text-bg-secondary">{{ destinationCount }}</span>
+                {{ 'sidebar-component.dest-page' | translate }} <span *ngIf="destinationCount > 0" class="badge text-bg-secondary animate__animated animate__faster animate__slideInUpBig">{{ destinationCount }}</span>
             </div>
         </li>
         <li id="privacy-item" class="sidebar-menu-item">
-            <li [routerLink]="'privacy'" id="privacy-item" class="sidebar-menu-item" [routerLinkActive]="'active'" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
+            <li [routerLink]="'privacy'" id="privacy-item" class="sidebar-menu-item animate__animated animate__faster animate__slideInUpBig animate__delay-200ms" [routerLinkActive]="'active'" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
                 <div class="sidebar-menu-item-container">
                 <i class="bi bi-shield-fill"></i>
                 {{ 'sidebar-component.privacy-page' | translate }}    
@@ -29,7 +29,7 @@
         </li>
     </ul>
     <!-- My lists -->
-    <div class="sidebar-section-header">
+    <div class="sidebar-section-header animate__animated animate__faster animate__slideInUpBig animate__delay-200ms">
         <span> {{ 'sidebar-component.lists-page' | translate }} </span>
         <button mat-icon-button color="primary" class="ms-2" (click)="openListDialog()">
             <mat-icon>add</mat-icon>
@@ -38,20 +38,20 @@
 
     <ul class="sidebar-menu">
         <li id="home-item" class="sidebar-menu-item">
-        <li [routerLink]="'destinations'" [queryParams]="{type: 'list', id: list.id}" [routerLinkActive]="'active'" *ngFor="let list of availableLists" id="home-item" class="sidebar-menu-item" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
+        <li [routerLink]="'destinations'" [queryParams]="{type: 'list', id: list.id}" [routerLinkActive]="'active'" *ngFor="let list of availableLists" id="home-item" class="sidebar-menu-item animate__animated animate__faster animate__slideInUpBig" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
             <div class="sidebar-menu-item-container">
                 {{ list.name }}
             </div>
         </li>
     </ul>
     <!-- Tags -->
-    <div class="sidebar-section-header">
+    <div class="sidebar-section-header animate__animated animate__faster animate__slideInUpBig animate__delay-300ms">
         {{ 'sidebar-component.tags-page' | translate }}
     </div>
 
     <ul class="sidebar-menu">
         <li id="home-item" class="sidebar-menu-item">
-        <li [routerLink]="'destinations'" [queryParams]="{type: 'tag', id: tag.id}" [routerLinkActive]="'active'" *ngFor="let tag of availableTags" id="home-item" class="sidebar-menu-item" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
+        <li [routerLink]="'destinations'" [queryParams]="{type: 'tag', id: tag.id}" [routerLinkActive]="'active'" *ngFor="let tag of availableTags" id="home-item" class="sidebar-menu-item animate__animated animate__faster animate__slideInUpBig" matRipple [matRippleCentered]="false" [matRippleColor]="'rgba(0, 255, 0, 0.1)'">
             <div class="sidebar-menu-item-container">
                 #{{ tag.name | translate }}
             </div>

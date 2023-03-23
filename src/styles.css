@@ -154,6 +154,14 @@ body {
 .animate__delay-100ms {
     animation-delay: 100ms !important;
 }
+.animate__delay-200ms {
+    animation-delay: 200ms !important;
+}
+
+.animate__delay-300ms {
+    animation-delay: 300ms !important;
+}
+
 
 .animate__slideInUpBig {
     animation-name: slideInUpBig;
