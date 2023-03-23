@@ -36,4 +36,10 @@ export interface IDestination extends IItemBase {
      * Gets or sets if destination has been marked as done / visited.
      */
     done: boolean;
+
+
+    /**
+     * Gets or sets notes about destination.
+     */
+    notes: string;
 }

@@ -32,7 +32,7 @@ export class HomeComponent {
     private destinationsService: DestinationService,
     public dialog: MatDialog) {
       setTimeout(() => {
-        this.getUpcomignDestinations();
+        this.getUpcomingDestinations();
       }, 1000);
   }
 
@@ -43,7 +43,7 @@ export class HomeComponent {
   /**
    * Gets upcoming destinations.
    */
-  private getUpcomignDestinations(): void {
+  private getUpcomingDestinations(): void {
     this.destinationsService.getUpcomingDestinations().subscribe(result => {
       this.upcomingDestinations = result.map((val) => {
         return val._data;

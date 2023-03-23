@@ -6,7 +6,7 @@ import { ITag } from "src/app/models/tag.interface";
 /**
  * Collection schema for destinations.
  */
-export const destinationsSchema: RxJsonSchema<IDestination>  = {
+export const destinationsSchema: RxJsonSchema<IDestination> = {
     title: 'destinations schema',
     version: 0,
     primaryKey: 'id',
@@ -33,35 +33,39 @@ export const destinationsSchema: RxJsonSchema<IDestination>  = {
         },
         done: {
             type: 'boolean'
-        }
-    },
-    required: ['id', 'destination', 'continent', 'createdAt', 'tag', 'list', 'done']
+        },
+
+        notes: {
+            type: 'string'
+        },
+        required: ['id', 'destination', 'continent', 'createdAt', 'tag', 'list', 'done', 'notes']
+    }
 }
 
 /**
  * Collection schema for my lists.
  */
-export const listsSchema: RxJsonSchema<IList>  = {
-    title: 'lists schema',
-    version: 0,
-    primaryKey: 'id',
-    type: 'object',
-    properties: {
-        id: {
-            type: 'string',
-            maxLength: 100 // <- the primary key must have set maxLength
+export const listsSchema: RxJsonSchema<IList> = {
+        title: 'lists schema',
+        version: 0,
+        primaryKey: 'id',
+        type: 'object',
+        properties: {
+            id: {
+                type: 'string',
+                maxLength: 100 // <- the primary key must have set maxLength
         },
-        name: {
-            type: 'string',
+            name: {
+                type: 'string',
+            },
         },
-    },
-    required: ['id', 'name']
-}
+        required: ['id', 'name']
+    }
 
 /**
  * Collection schema for tags.
  */
-export const tagsSchema: RxJsonSchema<ITag>  = {
+export const tagsSchema: RxJsonSchema<ITag> = {
     title: 'tags schema',
     version: 0,
     primaryKey: 'id',

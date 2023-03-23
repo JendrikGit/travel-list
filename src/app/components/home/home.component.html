@@ -40,7 +40,7 @@
         <ul class="travel-list mt-3 mb-5 animate__animated animate__slideInUp animate__faster">
             <li class="travel-list-item" matRipple *ngFor="let destination of upcomingDestinations">
                 <div class="travel-list-item-panel">
-                    <mat-checkbox class="list-item-checkbox"></mat-checkbox>
+                    <mat-checkbox [(ngModel)]="destination.done" class="list-item-checkbox"></mat-checkbox>
                     <div class="list-item-info-panel">
                         <mat-chip-set>
                             <mat-chip class="travel-list-tag-box travel-list-country-box">
