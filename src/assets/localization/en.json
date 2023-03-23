@@ -14,42 +14,49 @@
         "greeting-message": "Good Evening, Heiko",
         "greeting-quote": "What's your next destination?",
         "upcoming": "Upcoming",
-        "add-task": "Add destination"
+        "add-task": "Add destination",
+        "loading": "Loading",
+        "empty": "It's empty in here",
+        "empty-info": "You don't have any upcoming plans.",
+        "empty-info-past": "You don't have any past destinations."
     },
-    "destinations-component": {
-        "header": "Your travel plans",
-        "notes": "Notes about destination",
-        "lists": "List",
-        "tags": "Tags",
-        "mark-done": "Mark as completed",
-        "notes-placeholder": "Enter notes here",
-        "upcoming": "Upcoming",
-        "past": "Past",
-        "delete": "Delete"
-    },
-    "privacy-component": {
-        "header": "Privacy policy"
-    },
-    "list-dialog": {
-        "header": "Create a list",
-        "label": "What name would you like to use for the new list?",
-        "save": "Save list",
-        "cancel": "Cancel"
-    },
-    "tags-dialog": {
-        "header": "Create a tag",
-        "label": "What name would you like to use for the new tag?",
-        "save": "Save tag",
-        "cancel": "Cancel"
-
-    },
-    "destinations-dialog": {
-        "header": "Add new destination",
-        "label": "Where would you like to go next?",
-        "save": "Save destination",
-        "cancel": "Cancel",
-        "target-list": "List",
-        "target-continent": "Continent",
-        "target-dest": "Destination"
+        "destinations-component": {
+            "header": "Your travel plans",
+            "notes": "Notes about destination",
+            "lists": "List",
+            "tags": "Tags",
+            "mark-done": "Mark as completed",
+            "mark-undone": "Mark as upcoming",
+            "notes-placeholder": "Enter notes here",
+            "upcoming": "Upcoming",
+            "past": "Past",
+            "delete": "Delete",
+            "notes-placeholder-readonly": "Destination notes",
+            "select-info": "Select any destination to see more info here.",
+            "save-notes": "Save changes"
+        },
+        "privacy-component": {
+            "header": "Privacy policy"
+        },
+        "list-dialog": {
+            "header": "Create a list",
+            "label": "What name would you like to use for the new list?",
+            "save": "Save list",
+            "cancel": "Cancel"
+        },
+        "tags-dialog": {
+            "header": "Create a tag",
+            "label": "What name would you like to use for the new tag?",
+            "save": "Save tag",
+            "cancel": "Cancel"
+        },
+        "destinations-dialog": {
+            "header": "Add new destination",
+            "label": "Where would you like to go next?",
+            "save": "Save destination",
+            "cancel": "Cancel",
+            "target-list": "List",
+            "target-continent": "Continent",
+            "target-dest": "Destination"
+        }
     }
-}

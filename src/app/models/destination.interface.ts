@@ -20,7 +20,7 @@ export interface IDestination extends IItemBase {
     /**
      * Gets or sets date of creation.
      */
-    createdAt: Date;
+    createdAt: String;
 
     /**
      * Gets or sets destination tag.

@@ -23,7 +23,7 @@ export const destinationsSchema: RxJsonSchema<IDestination> = {
             type: 'string'
         },
         createdAt: {
-            type: 'object'
+            type: 'string'
         },
         tag: {
             type: 'object',
