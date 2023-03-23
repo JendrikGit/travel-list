@@ -23,4 +23,7 @@
     --chip-tag-background-color: #d5d5d5;
     --chip-tag-color: black;
     --chip-tag-country-background-color: #77b942;
+
+    /* MAT SELECT */
+    --selected-value-color: black;
 }
